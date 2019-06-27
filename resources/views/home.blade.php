@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Anda berhasil login!
+                    Selamat Anda berhasil login!        
                 </div>
             </div>
         </div>
