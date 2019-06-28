@@ -74,6 +74,7 @@ desired effect
         | Your Page Content Here |
         -------------------------->
     
+        @yield('content')
     </div>
     <!-- /.content-wrapper -->
     <!-- div diatas utk tutup class content-wrapper -->
