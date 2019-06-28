@@ -26,9 +26,9 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function menu1()
+    public function menu()
     {
-        return view('menu1');
+        return view('tampilan.menu1');
     }
     // public function index2()
     // {
