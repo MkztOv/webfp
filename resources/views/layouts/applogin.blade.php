@@ -64,8 +64,7 @@ desired effect
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    @yield('konten_header')
-        
+            
     <!-- Main content -->
     <!-- dipanggil dengan @yield('kontent')
          *konten itu nama variabel di file dashboard.blade.php -->
@@ -73,7 +72,7 @@ desired effect
     <!--------------------------
         | Your Page Content Here |
         -------------------------->
-    
+
         @yield('content')
     </div>
     <!-- /.content-wrapper -->

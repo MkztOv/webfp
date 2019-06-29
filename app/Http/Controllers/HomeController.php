@@ -30,8 +30,5 @@ class HomeController extends Controller
     {
         return view('tampilan.menu1');
     }
-    // public function index2()
-    // {
-    //     return view('tampilan.master');
-    // }
+    
 }

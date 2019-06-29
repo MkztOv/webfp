@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- <div class="container">
-    
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -21,10 +21,20 @@
         </div>
     </div>
 </div> -->
+<div class="content-header">
+  <h1>Homepage</h1>
+    <ol class="breadcrumb">
+        <li class="active">
+            <a href="{{url('/home')}}"><i class="fa fa-dashboard"></i> Home</a>
+        </li>
+    </ol>
+</div>
+
 <section class="content container-fluid">
     <!-- <section class="content-header">
         <h2>Hai</h2>
     </section> -->
+
     <div class="box">
         <div class="box-header with-border" style="background-color: grey;">
             <h3 class="box-title">Ini judul</h3>
@@ -37,7 +47,7 @@
             </div>
         </div>
         <div class="box-body">
-          Ini bagian box-body (contoh template)
+          <p>Ini bagian box-body (contoh template)</p>
         </div>
         <div class="box-footer">
           Footer
