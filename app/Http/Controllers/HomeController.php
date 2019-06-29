@@ -30,5 +30,10 @@ class HomeController extends Controller
     {
         return view('tampilan.menu1');
     }
-    
+
+    public function profile()
+    {
+        return view('tampilan.profile');
+    }
+
 }

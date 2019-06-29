@@ -10,7 +10,8 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Yuda Mubarok</p>
+          {{ Auth::user()->name }}
+          <br/>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
@@ -30,19 +31,19 @@
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">HEADER</li>
+        <li class="header">Sidebar header</li>
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="{{ url('/menu1') }}"><i class="fa fa-link"></i> <span>Menu 1</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+        <li><a href="#"><i class="fa fa-flask"></i><span>Ubah untuk menu selanjutnya</span></a></li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+          <a href="#"><i class="fa fa-link"></i><span>ini multi level menu</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
+            <li><a href="#">level menu a</a></li>
+            <li><a href="#">levevl menu b</a></li>
           </ul>
         </li>
       </ul>

@@ -25,7 +25,7 @@
   <h1>Homepage</h1>
     <ol class="breadcrumb">
         <li class="active">
-            <a href="{{url('/home')}}"><i class="fa fa-dashboard"></i> Home</a>
+            <a href="{{url('/home')}}"><i class="fa fa-home"></i> Home</a>
         </li>
     </ol>
 </div>
