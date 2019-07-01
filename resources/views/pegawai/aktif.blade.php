@@ -23,6 +23,7 @@
 <!-- akhir konten header -->
 
 	<section>
+
 	<div class="container">
 		<div class="card">
 			<div class="card-body">
@@ -43,60 +44,60 @@
                 <br/>
                 <br/>
                 <div style="overflow-x:auto;">
-                <table class="table table-bordered">
-					<tr>
-						<th>Pilih</th>
-						<th>PIN</th>
-						<th>NIP</th>
-						<th>Nama</th>
-						<th>Jadwal Kerja</th>
-                        <th>Tgl. Mulai Jadwal</th>
-                        <th>Tempat Lahir</th>
-                        <th>Tanggal Lahir</th>
-                        <th>Jabatan</th>
-                        <th>Departemen</th>
-                        <th>Kantor</th>
-                        <th>Password</th>
-                        <th>RFID</th>
-                        <th>No. Telp</th>
-                        <th>Privilage</th>
-                        <th>Status Pegawai</th>
-                        <th>FP ZK</th>
-                        <th>FP Neo</th>
-                        <th>FP Revo</th>
-                        <th>FP Livo</th>
-                        <th>FP UareU</th>
-                        <th>Face</th>
-                        <th>Tgl. Masuk Kerja</th>
-                        <th>Tgl. Akhir Kerja</th>
+                <table style="border-style: solid;border-color: black" class="table table-bordered">
+					<tr style="border-style: solid;border-color: black">
+						<th style="border-style: solid;border-color: black">Pilih</th>
+						<th style="border-style: solid;border-color: black">PIN</th>
+						<th style="border-style: solid;border-color: black">NIP</th>
+						<th style="border-style: solid;border-color: black">Nama</th>
+						<th style="border-style: solid;border-color: black">Jadwal Kerja</th>
+                        <th style="border-style: solid;border-color: black">Tgl. Mulai Jadwal</th>
+                        <th style="border-style: solid;border-color: black">Tempat Lahir</th>
+                        <th style="border-style: solid;border-color: black">Tanggal Lahir</th>
+                        <th style="border-style: solid;border-color: black">Jabatan</th>
+                        <th style="border-style: solid;border-color: black">Departemen</th>
+                        <th style="border-style: solid;border-color: black">Kantor</th>
+                        <th style="border-style: solid;border-color: black">Password</th>
+                        <th style="border-style: solid;border-color: black">RFID</th>
+                        <th style="border-style: solid;border-color: black">No. Telp</th>
+                        <th style="border-style: solid;border-color: black">Privilage</th>
+                        <th style="border-style: solid;border-color: black">Status Pegawai</th>
+                        <th style="border-style: solid;border-color: black">FP ZK</th>
+                        <th style="border-style: solid;border-color: black">FP Neo</th>
+                        <th style="border-style: solid;border-color: black">FP Revo</th>
+                        <th style="border-style: solid;border-color: black">FP Livo</th>
+                        <th style="border-style: solid;border-color: black">FP UareU</th>
+                        <th style="border-style: solid;border-color: black">Face</th>
+                        <th style="border-style: solid;border-color: black">Tgl. Masuk Kerja</th>
+                        <th style="border-style: solid;border-color: black">Tgl. Akhir Kerja</th>
 
 					</tr>
                     
                     <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
+                        <th style="border-style: solid;border-color: black"></th>
                     </tr>
 					
 				</table>

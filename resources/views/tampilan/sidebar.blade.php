@@ -42,10 +42,10 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{url('aktif')}}">Aktif</a></li>
-            <li><a href="#">Detail pegawai</a></li>
-            <li><a href="#">Non Aktif</a></li>
-            <li><a href="#">Berhenti</a></li>
-            <li><a href="#">Segera habis kontrak</a></li>
+            <li><a href="{{url('detail')}}">Detail pegawai</a></li>
+            <li><a href="{{url('nonaktif')}}">Non Aktif</a></li>
+            <li><a href="{{url('berhenti')}}">Berhenti</a></li>
+            <li><a href="{{url('habis')}}">Segera habis kontrak</a></li>
           </ul>
         </li>
 
