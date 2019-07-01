@@ -21,5 +21,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/menu1','HomeController@menu');
+Route::get('/pegawai_aktif','HomeController@pegawai_aktif');
+
 Route::get('/profile','HomeController@profile');

@@ -33,8 +33,23 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Sidebar header</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="{{ url('/menu1') }}"><i class="fa fa-link"></i> <span>Menu 1</span></a></li>
-        <li><a href="#"><i class="fa fa-flask"></i><span>Ubah untuk menu selanjutnya</span></a></li>
+        <!-- <li class="active"><a href="{{ url('/pegawai') }}"><i class="fa fa-link"></i> <span>Pegawai</span></a></li> -->
+        <li class="treeview">
+          <a href="{{ url('/pegawai_aktif') }}"><i class="fa fa-link"></i><span>Pegawai</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{url('pegawai_aktif')}}">Aktif</a></li>
+            <li><a href="#">Detail pegawai</a></li>
+            <li><a href="#">Non Aktif</a></li>
+            <li><a href="#">Berhenti</a></li>
+            <li><a href="#">Segera habis kontrak</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#"><i class="fa fa-flask"></i><span>Menu selanjutnya</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i><span>ini multi level menu</span>
             <span class="pull-right-container">

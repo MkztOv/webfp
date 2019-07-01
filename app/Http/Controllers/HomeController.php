@@ -26,14 +26,15 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function menu()
-    {
-        return view('tampilan.menu1');
-    }
-
     public function profile()
     {
         return view('tampilan.profile');
+    }
+
+    //method Pegawai
+    public function pegawai_aktif()
+    {
+        return view('tampilan/pegawai/pegawai_aktif');
     }
 
 }
