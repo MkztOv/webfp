@@ -37,4 +37,24 @@ class HomeController extends Controller
         return view('tampilan/pegawai/pegawai_aktif');
     }
 
+    public function aktif(){
+        return view('pegawai/aktif');
+    }
+
+    public function berhenti(){
+        return view('pegawai/berhenti');
+    }
+
+    public function detail(){
+        return view('pegawai/detail_pegawai');
+    }
+
+    public function habis(){
+        return view('pegawai/habis');
+    }
+
+    public function nonaktif(){
+        return view('pegawai/nonaktif');
+    }
+
 }

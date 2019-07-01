@@ -24,3 +24,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/pegawai_aktif','HomeController@pegawai_aktif');
 
 Route::get('/profile','HomeController@profile');
+
+Route::get('/pegawai', 'HomeController@pegawai');
+Route::get('/aktif', 'HomeController@aktif');
+Route::get('/berhenti', 'HomeController@berhenti');
+Route::get('/detail', 'HomeController@detail');
+Route::get('/habis', 'HomeController@habis');
+Route::get('/nonaktif', 'HomeController@nonaktif');
