@@ -35,13 +35,13 @@
         <!-- Optionally, you can add icons to the links -->
         <!-- <li class="active"><a href="{{ url('/pegawai') }}"><i class="fa fa-link"></i> <span>Pegawai</span></a></li> -->
         <li class="treeview">
-          <a href="{{ url('/pegawai_aktif') }}"><i class="fa fa-link"></i><span>Pegawai</span>
+          <a href="{{ url('/aktif') }}"><i class="fa fa-link"></i><span>Pegawai</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{url('pegawai_aktif')}}">Aktif</a></li>
+            <li><a href="{{url('aktif')}}">Aktif</a></li>
             <li><a href="#">Detail pegawai</a></li>
             <li><a href="#">Non Aktif</a></li>
             <li><a href="#">Berhenti</a></li>
