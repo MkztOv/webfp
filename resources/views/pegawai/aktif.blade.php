@@ -27,20 +27,20 @@
 	<div class="container">
 		<div class="card">
 			<div class="card-body">
-				
- 
+
+
 				<h3>Aktif</h3>
 				<br/>
                 <div>
-                <a class="btn btn-success btn-sm" href="/#">Tambah Pegawai</a>
-                <a class="btn btn-success btn-sm" href="/#">Tambah Pegawai</a>
-                <a href="http://">clear filter data</a>
-                <a class="btn btn-success btn-sm" href="/#">Import</a>
-                <a class="btn btn-success btn-sm" href="/#">Export</a>
-                <a class="btn btn-success btn-sm" href="/#">Cetak</a>
-                <a class="btn btn-success btn-sm" href="/#">Cetak Pegawai Kontrak</a>
+                <a class="btn btn-success btn-sm" href="#">Tambah Pegawai</a>
+                <a class="btn btn-success btn-sm" href="#">Tambah Pegawai</a>
+                <a href="#">clear filter data</a>
+                <a class="btn btn-success btn-sm" href="#">Import</a>
+                <a class="btn btn-success btn-sm" href="#">Export</a>
+                <a class="btn btn-success btn-sm" href="#">Cetak</a>
+                <a class="btn btn-success btn-sm" href="#">Cetak Pegawai Kontrak</a>
                 </div>
-                
+
                 <br/>
                 <br/>
                 <div style="overflow-x:auto;">
@@ -72,7 +72,7 @@
                         <th style="border-style: solid;border-color: black">Tgl. Akhir Kerja</th>
 
 					</tr>
-                    
+
                     <tr>
                         <th style="border-style: solid;border-color: black"></th>
                         <th style="border-style: solid;border-color: black"></th>
@@ -99,32 +99,32 @@
                         <th style="border-style: solid;border-color: black"></th>
                         <th style="border-style: solid;border-color: black"></th>
                     </tr>
-					
+
 				</table>
 
-                
-                </div>
-				
- 
-				<br/>
-				
-				<br/>
-                <a class="btn btn-success btn-sm" href="/#">v</a>
-                <a class="btn btn-success btn-sm" href="/#">v</a>
-                <a class="btn btn-success btn-sm" href="/#">v</a>
-                <br/>
-                <br/>
-                <a class="btn btn-success btn-sm" href="/#">Tambah Ke daftar Pilihan</a>
-                <a class="btn btn-success btn-sm" href="/#">Daftar Pilihan</a>
-                <a class="btn btn-success btn-sm" href="/#">Ganti Status</a>
-                <a class="btn btn-success btn-sm" href="/#">Pengecualian</a>
-                <a class="btn btn-success btn-sm" href="/#">Jadwal Pegawai</a>
-                <a class="btn btn-success btn-sm" href="/#">Pegawai Belum Registrasi</a>
 
-                
+                </div>
+
+
+				<br/>
+
+				<br/>
+                <a class="btn btn-success btn-sm" href="#">v</a>
+                <a class="btn btn-success btn-sm" href="#">v</a>
+                <a class="btn btn-success btn-sm" href="#">v</a>
+                <br/>
+                <br/>
+                <a class="btn btn-success btn-sm" href="#">Tambah Ke daftar Pilihan</a>
+                <a class="btn btn-success btn-sm" href="#">Daftar Pilihan</a>
+                <a class="btn btn-success btn-sm" href="#">Ganti Status</a>
+                <a class="btn btn-success btn-sm" href="#">Pengecualian</a>
+                <a class="btn btn-success btn-sm" href="#">Jadwal Pegawai</a>
+                <a class="btn btn-success btn-sm" href="#">Pegawai Belum Registrasi</a>
+
+
 			</div>
 		</div>
 	</div>
- 
+
 	</section>
 @endsection
