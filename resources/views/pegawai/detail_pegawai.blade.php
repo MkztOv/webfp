@@ -10,7 +10,7 @@
             <a href="{{url('/pegawai_aktif')}}">Pegawai</a>
         </li>
         <li class="active">
-            <a href="{{url('/pegawai_aktif')}}">Aktif</a>
+            <a href="{{url('/detail_pegawai')}}">Detail pegawai</a>
         </li>
     </ol>
 </section>

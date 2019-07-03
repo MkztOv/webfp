@@ -32,11 +32,6 @@ class HomeController extends Controller
     }
 
     //method Pegawai
-    public function pegawai_aktif()
-    {
-        return view('tampilan/pegawai/pegawai_aktif');
-    }
-
     public function aktif(){
         return view('pegawai/aktif');
     }
