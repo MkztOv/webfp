@@ -1,5 +1,12 @@
 @extends('layouts.applogin')
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
 
+    </style>
+  </head>
+</html>
 @section('content')
 <!-- ini untuk menu, ini muncul ketika link pada sidebar diklik -->
 
@@ -23,11 +30,11 @@
 
 <section>
 <body>
- 
+
  <div class="container">
      <div class="card">
          <div class="card-body">
-             
+
 
              <h3>Berhenti</h3>
              <br/>
@@ -40,7 +47,7 @@
              <a class="btn btn-success btn-sm" href="/#">Cetak</a>
              <a class="btn btn-success btn-sm" href="/#">Cetak Pegawai Kontrak</a>
              </div>
-             
+
              <br/>
              <br/>
              <div style="overflow-x:auto;">
@@ -72,43 +79,102 @@
                      <th>Tgl. Akhir Kerja</th>
 
                  </tr>
-                 
+
                  <tr>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
                  </tr>
-                 
+
              </table>
              </div>
-             
+
 
              <br/>
-             
-             <br/>
 
-             
+             <br/>
+             <div style="overflow-x:auto;">
+             <table class="table table-bordered">
+               <thead> ini thead
+                 <tr>
+                   <th>Pilih</th>
+                   <th>PIN</th>
+                   <th>NIP</th>
+                   <th>Nama</th>
+                   <th>Jadwal Kerja</th>
+                   <th>Tgl. Mulai Jadwal</th>
+                   <th>Tempat Lahir</th>
+                   <th>Tanggal Lahir</th>
+                   <th>Jabatan</th>
+                   <th>Departemen</th>
+                   <th>Kantor</th>
+                   <th>Password</th>
+                   <th>RFID</th>
+                   <th>No. Telp</th>
+                   <th>Privilage</th>
+                   <th>Status Pegawai</th>
+                   <th>FP ZK</th>
+                   <th>FP Neo</th>
+                   <th>FP Revo</th>
+                   <th>FP Livo</th>
+                   <th>FP UareU</th>
+                   <th>Face</th>
+                   <th>Tgl. Masuk Kerja</th>
+                   <th>Tgl. Akhir Kerja</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <tr>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                 </tr>
+               </tbody>
+             </table>
+             </div>
+
          </div>
      </div>
  </div>
