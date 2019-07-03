@@ -45,11 +45,11 @@ class HomeController extends Controller
     }
 
     public function habis(){
-        return view('pegawai/habis');
+        return view('pegawai/habis_kontrak');
     }
 
     public function nonaktif(){
-        return view('pegawai/nonaktif');
+        return view('pegawai/non_aktif');
     }
 
 }
