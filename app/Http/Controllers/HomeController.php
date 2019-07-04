@@ -87,6 +87,22 @@ class HomeController extends Controller
         return view('pengecualian/ganti_jam_kerja_perpegawai');
     }
 
+    public function tukarjam() {
+        return view('pengecualian/tukar_jam_kerja');
+    }
+
+    public function jadwallembur() {
+        return view('pengecualian/penjadwalan_lembur');
+    }
+
+    public function kerjaextra() {
+        return view('pengecualian/kerja_extra_perhari');
+    }
+
+
+
+
+
 
 
 }
