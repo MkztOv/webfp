@@ -1,18 +1,10 @@
 @extends('layouts.applogin')
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-
-    </style>
-  </head>
-</html>
 @section('content')
 <!-- ini untuk menu, ini muncul ketika link pada sidebar diklik -->
 
 <section class="content-header">
   <h1>
-        Pegawai Aktif
+        Pegawai Berhenti
 
   </h1>
     <ol class="breadcrumb">
@@ -23,7 +15,7 @@
             <a href="{{url('/pegawai_aktif')}}">Pegawai</a>
         </li>
         <li class="active">
-            <a href="{{url('/pegawai_aktif')}}">Aktif</a>
+            <a href="{{url('/berhenti')}}">Berhenti</a>
         </li>
     </ol>
 </section>
@@ -34,9 +26,6 @@
  <div class="container">
      <div class="card">
          <div class="card-body">
-
-
-             <h3>Berhenti</h3>
              <br/>
              <div>
              <a class="btn btn-success btn-sm" href="/#">Tambah Pegawai</a>
@@ -114,66 +103,6 @@
              <br/>
 
              <br/>
-             <div style="overflow-x:auto;">
-             <table class="table table-bordered">
-               <thead> ini thead
-                 <tr>
-                   <th>Pilih</th>
-                   <th>PIN</th>
-                   <th>NIP</th>
-                   <th>Nama</th>
-                   <th>Jadwal Kerja</th>
-                   <th>Tgl. Mulai Jadwal</th>
-                   <th>Tempat Lahir</th>
-                   <th>Tanggal Lahir</th>
-                   <th>Jabatan</th>
-                   <th>Departemen</th>
-                   <th>Kantor</th>
-                   <th>Password</th>
-                   <th>RFID</th>
-                   <th>No. Telp</th>
-                   <th>Privilage</th>
-                   <th>Status Pegawai</th>
-                   <th>FP ZK</th>
-                   <th>FP Neo</th>
-                   <th>FP Revo</th>
-                   <th>FP Livo</th>
-                   <th>FP UareU</th>
-                   <th>Face</th>
-                   <th>Tgl. Masuk Kerja</th>
-                   <th>Tgl. Akhir Kerja</th>
-                 </tr>
-               </thead>
-               <tbody>
-                 <tr>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                 </tr>
-               </tbody>
-             </table>
-             </div>
 
          </div>
      </div>
