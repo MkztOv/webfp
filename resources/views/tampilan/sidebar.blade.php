@@ -49,16 +49,39 @@
           </ul>
         </li>
 
-        <li><a href="#"><i class="fa fa-flask"></i><span>Menu selanjutnya</span></a></li>
+        <!-- <li><a href="#"><i class="fa fa-flask"></i><span>Pengecualian</span></a></li>
+        <li class="treeview"> -->
+
+          <li class="treeview">
+          <a href="{{ url('/aktif') }}"><i class="fa fa-link"></i><span>Pengecualian</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{url('izin_kolektif')}}">Izin, Terlambat, Cuti - KOLEKTIF</a></li>
+            <li><a href="{{url('izin_personal')}}">Izin, Terlambat, Cuti - PERSONAL</a></li>
+            <li><a href="{{url('gantijadwal')}}">Ganti Jadwal Kerja</a></li>
+            <li><a href="{{url('gantijadwal_perbagian')}}">Ganti Jadwal Kerja per Bagian</a></li>
+            <li><a href="{{url('gantijadwal_perpegawai')}}">Ganti Jadwal Kerja per Pegawai</a></li>
+            <li><a href="{{url('gantijam')}}">Ganti Jam Kerja</a></li>
+            <li><a href="{{url('gantijam_perbagian')}}">Ganti Jam Kerja per Bagian</a></li>
+            <li><a href="{{url('gantijam_perpegawai')}}">Ganti Jam Kerja per Pegawai</a></li>
+            <li><a href="{{url('detail')}}">Tukar Jam Kerja</a></li>
+            <li><a href="{{url('detail')}}">Penjadwalan Libur</a></li>
+            <li><a href="{{url('detail')}}">Kerja Extra per Hari</a></li>
+          </ul>
+        </li>
+
         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i><span>ini multi level menu</span>
+          <a href="#"><i class="fa fa-link"></i><span>Mesin</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
             <li><a href="#">level menu a</a></li>
-            <li><a href="#">levevl menu b</a></li>
+            <li><a href="#">level menu b</a></li>
           </ul>
         </li>
       </ul>

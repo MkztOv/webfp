@@ -32,6 +32,7 @@ class HomeController extends Controller
     }
 
     //method Pegawai
+
     public function pegawai_aktif()
     {
         return view('tampilan/pegawai/pegawai_aktif');
@@ -56,5 +57,41 @@ class HomeController extends Controller
     public function nonaktif(){
         return view('pegawai/nonaktif');
     }
+
+    //METHOD PENGECUALIAN
+
+    public function izin_kolektif() {
+        return view('pengecualian/izin_terlambat_cuti_kolektif');
+    }
+
+    public function izin_personal() {
+        return view('pengecualian/izin_terlambat_cuti_personal');
+    }
+
+    public function gantijadwal() {
+        return view('pengecualian/ganti_jadwal_kerja');
+    }
+
+    public function gantijadwal_perbagian() {
+        return view('pengecualian/ganti_jadwal_kerja_perbagian');
+    }
+    
+    public function gantijadwal_perpegawai() {
+        return view('pengecualian/ganti_jadwal_kerja_perpegawai');
+    }
+
+    public function gantijam() {
+        return view('pengecualian/ganti_jam_kerja');
+    }
+
+    public function gantijam_perbagian() {
+        return view('pengecualian/ganti_jam_kerja_perbagian');
+    }
+
+    public function gantijam_perpegawai() {
+        return view('pengecualian/ganti_jam_kerja_perpegawai');
+    }
+
+
 
 }

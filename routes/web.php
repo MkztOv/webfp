@@ -20,14 +20,23 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/profile','HomeController@profile');
 Route::get('/pegawai_aktif','HomeController@pegawai_aktif');
 
-Route::get('/profile','HomeController@profile');
-
+//route pegawai
 Route::get('/pegawai', 'HomeController@pegawai');
 Route::get('/aktif', 'HomeController@aktif');
 Route::get('/berhenti', 'HomeController@berhenti');
 Route::get('/detail', 'HomeController@detail');
 Route::get('/habis', 'HomeController@habis');
 Route::get('/nonaktif', 'HomeController@nonaktif');
+
+//route pengecualian
+Route::get('/izin_kolektif', 'HomeController@izin_kolektif');
+Route::get('/izin_personal', 'HomeController@izin_personal');
+Route::get('/gantijadwal', 'HomeController@gantijadwal');
+Route::get('/gantijadwal_perbagian', 'HomeController@gantijadwal_perbagian');
+Route::get('/gantijadwal_perpegawai', 'HomeController@gantijadwal_perpegawai');
+Route::get('/gantijam', 'HomeController@gantijam');
+Route::get('/gantijam_perbagian', 'HomeController@gantijam_perbagian');
+Route::get('/gantijam_perpegawai', 'HomeController@gantijam_perpegawai');
