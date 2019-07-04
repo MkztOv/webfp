@@ -40,3 +40,8 @@ Route::get('/gantijadwal_perpegawai', 'HomeController@gantijadwal_perpegawai');
 Route::get('/gantijam', 'HomeController@gantijam');
 Route::get('/gantijam_perbagian', 'HomeController@gantijam_perbagian');
 Route::get('/gantijam_perpegawai', 'HomeController@gantijam_perpegawai');
+Route::get('/tukarjam', 'HomeController@tukarjam');
+Route::get('/jadwallembur', 'HomeController@jadwallembur');
+Route::get('/kerjaextra', 'HomeController@kerjaextra');
+
+//route mesin

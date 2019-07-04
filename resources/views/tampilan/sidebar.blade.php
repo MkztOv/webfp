@@ -67,9 +67,9 @@
             <li><a href="{{url('gantijam')}}">Ganti Jam Kerja</a></li>
             <li><a href="{{url('gantijam_perbagian')}}">Ganti Jam Kerja per Bagian</a></li>
             <li><a href="{{url('gantijam_perpegawai')}}">Ganti Jam Kerja per Pegawai</a></li>
-            <li><a href="{{url('detail')}}">Tukar Jam Kerja</a></li>
-            <li><a href="{{url('detail')}}">Penjadwalan Libur</a></li>
-            <li><a href="{{url('detail')}}">Kerja Extra per Hari</a></li>
+            <li><a href="{{url('tukarjam')}}">Tukar Jam Kerja</a></li>
+            <li><a href="{{url('jadwallembur')}}">Penjadwalan Lembur</a></li>
+            <li><a href="{{url('kerjaextra')}}">Kerja Extra per Hari</a></li>
           </ul>
         </li>
 
@@ -84,6 +84,31 @@
             <li><a href="#">level menu b</a></li>
           </ul>
         </li>
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i><span>Laporan</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#">level menu a</a></li>
+            <li><a href="#">level menu b</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i><span>Pengaturan</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#">level menu a</a></li>
+            <li><a href="#">level menu b</a></li>
+          </ul>
+        </li>
+
       </ul>
       <!-- /.sidebar-menu -->
     </section>
