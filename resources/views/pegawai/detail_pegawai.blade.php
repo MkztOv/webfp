@@ -1,13 +1,13 @@
 @extends('layouts.applogin')
 @section('content')
 <section class="content-header">
-  <h1>Pegawai Aktif</h1>
+  <h1>Detail Pegawai</h1>
     <ol class="breadcrumb">
         <li>
             <a href="{{url('/home')}}"><i class="fa fa-home"></i>Home</a>
         </li>
         <li>
-            <a href="{{url('/pegawai_aktif')}}">Pegawai</a>
+            <a href="{{url('/aktif')}}">Pegawai</a>
         </li>
         <li class="active">
             <a href="{{url('/detail_pegawai')}}">Detail pegawai</a>
@@ -17,13 +17,9 @@
 <section>
 
 <body>
- 
 	<div class="container">
 		<div class="card">
 			<div class="card-body">
-				
- 
-				<h3>Detail Pegawai</h3>
 				<br/>
                 <div>
                 <a class="btn btn-success btn-sm" href="/#">Foto Pegawai</a>
@@ -31,7 +27,7 @@
                 <a class="btn btn-success btn-sm" href="/#">Export</a>
                 <a class="btn btn-success btn-sm" href="/#">Cetak</a>
                 </div>
-                
+
                 <br/>
                 <br/>
                 <div style="overflow-x:auto;">
@@ -57,8 +53,8 @@
                     <th>No. Rekening</th>
                     <th>Nama</th>
                     <th>No. Telpon</th>
-                    <th>Hubungan</th> 
-                        
+                    <th>Hubungan</th>
+
                 </tr>
                 <tr>
                     <th></th>
@@ -79,22 +75,22 @@
                     <th></th>
                     <th></th>
                 </tr>
-                    
-					
+
+
 				</table>
                 </div>
-				
- 
+
+
 				<br/>
-				
+
 				<br/>
- 
-				
+
+
 			</div>
 		</div>
 	</div>
- 
- 
+
+
 </body>
   </section>
 

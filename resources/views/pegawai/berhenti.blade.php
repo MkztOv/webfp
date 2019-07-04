@@ -12,7 +12,7 @@
             <a href="{{url('/home')}}"><i class="fa fa-home"></i>Home</a>
         </li>
         <li>
-            <a href="{{url('/pegawai_aktif')}}">Pegawai</a>
+            <a href="{{url('/aktif')}}">Pegawai</a>
         </li>
         <li class="active">
             <a href="{{url('/berhenti')}}">Berhenti</a>
@@ -42,33 +42,31 @@
              <div style="overflow-x:auto;">
              <table class="table table-bordered">
                  <tr>
-                     <th>Pilih</th>
-                     <th>PIN</th>
-                     <th>NIP</th>
-                     <th>Nama</th>
-                     <th>Jadwal Kerja</th>
-                     <th>Tgl. Mulai Jadwal</th>
-                     <th>Tempat Lahir</th>
-                     <th>Tanggal Lahir</th>
-                     <th>Jabatan</th>
-                     <th>Departemen</th>
-                     <th>Kantor</th>
-                     <th>Password</th>
-                     <th>RFID</th>
-                     <th>No. Telp</th>
-                     <th>Privilage</th>
-                     <th>Status Pegawai</th>
-                     <th>FP ZK</th>
-                     <th>FP Neo</th>
-                     <th>FP Revo</th>
-                     <th>FP Livo</th>
-                     <th>FP UareU</th>
-                     <th>Face</th>
-                     <th>Tgl. Masuk Kerja</th>
-                     <th>Tgl. Akhir Kerja</th>
-
+                   <th>Pilih</th>
+                   <th>PIN</th>
+                   <th>NIP</th>
+                   <th>Nama</th>
+                   <th>Jadwal Kerja</th>
+                   <th>Tgl. Mulai Jadwal</th>
+                   <th>Tempat Lahir</th>
+                   <th>Tanggal Lahir</th>
+                   <th>Jabatan</th>
+                   <th>Departemen</th>
+                   <th>Kantor</th>
+                   <th>Password</th>
+                   <th>RFID</th>
+                   <th>No. Telp</th>
+                   <th>Privilage</th>
+                   <th>Status Pegawai</th>
+                   <th>FP ZK</th>
+                   <th>FP Neo</th>
+                   <th>FP Revo</th>
+                   <th>FP Livo</th>
+                   <th>FP UareU</th>
+                   <th>Face</th>
+                   <th>Tgl. Masuk Kerja</th>
+                   <th>Tgl. Akhir Kerja</th>
                  </tr>
-
                  <tr>
                    <td></td>
                    <td></td>
@@ -95,7 +93,6 @@
                    <td></td>
                    <td></td>
                  </tr>
-
              </table>
              </div>
 

@@ -13,10 +13,10 @@
             <a href="{{url('/home')}}"><i class="fa fa-home"></i>Home</a>
         </li>
         <li>
-            <a href="{{url('/pegawai_aktif')}}">Pegawai</a>
+            <a href="{{url('/aktif')}}">Pegawai</a>
         </li>
         <li class="active">
-            <a href="{{url('/pegawai_aktif')}}">Aktif</a>
+            <a href="{{url('/aktif')}}">Aktif</a>
         </li>
     </ol>
 </section>

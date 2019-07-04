@@ -45,7 +45,7 @@
             <li><a href="{{url('detail')}}">Detail pegawai</a></li>
             <li><a href="{{url('nonaktif')}}">Non Aktif</a></li>
             <li><a href="{{url('berhenti')}}">Berhenti</a></li>
-            <li><a href="{{url('habis')}}">Segera habis kontrak</a></li>
+            <li><a href="{{url('habis_kontrak')}}">Segera habis kontrak</a></li>
           </ul>
         </li>
 
