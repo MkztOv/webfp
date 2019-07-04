@@ -32,12 +32,15 @@ class HomeController extends Controller
     }
 
     //method Pegawai
+<<<<<<< HEAD
 
     public function pegawai_aktif()
     {
         return view('tampilan/pegawai/pegawai_aktif');
     }
 
+=======
+>>>>>>> dev
     public function aktif(){
         return view('pegawai/aktif');
     }
@@ -51,11 +54,11 @@ class HomeController extends Controller
     }
 
     public function habis(){
-        return view('pegawai/habis');
+        return view('pegawai/habis_kontrak');
     }
 
     public function nonaktif(){
-        return view('pegawai/nonaktif');
+        return view('pegawai/non_aktif');
     }
 
     //METHOD PENGECUALIAN

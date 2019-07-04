@@ -1,11 +1,10 @@
 @extends('layouts.applogin')
-
 @section('content')
 <!-- ini untuk menu, ini muncul ketika link pada sidebar diklik -->
 
 <section class="content-header">
   <h1>
-        Pegawai Aktif
+        Pegawai Berhenti
 
   </h1>
     <ol class="breadcrumb">
@@ -16,20 +15,17 @@
             <a href="{{url('/pegawai_aktif')}}">Pegawai</a>
         </li>
         <li class="active">
-            <a href="{{url('/pegawai_aktif')}}">Aktif</a>
+            <a href="{{url('/berhenti')}}">Berhenti</a>
         </li>
     </ol>
 </section>
 
 <section>
 <body>
- 
+
  <div class="container">
      <div class="card">
          <div class="card-body">
-             
-
-             <h3>Berhenti</h3>
              <br/>
              <div>
              <a class="btn btn-success btn-sm" href="/#">Tambah Pegawai</a>
@@ -40,7 +36,7 @@
              <a class="btn btn-success btn-sm" href="/#">Cetak</a>
              <a class="btn btn-success btn-sm" href="/#">Cetak Pegawai Kontrak</a>
              </div>
-             
+
              <br/>
              <br/>
              <div style="overflow-x:auto;">
@@ -72,43 +68,42 @@
                      <th>Tgl. Akhir Kerja</th>
 
                  </tr>
-                 
+
                  <tr>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
-                     <th></th>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
                  </tr>
-                 
+
              </table>
              </div>
-             
+
 
              <br/>
-             
+
              <br/>
 
-             
          </div>
      </div>
  </div>
