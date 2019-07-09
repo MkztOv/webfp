@@ -21,16 +21,25 @@
 		<div class="card">
 			<div class="card-body">
 				<br/>
-                <div>
-                <a class="btn btn-success btn-sm" href="/#">Foto Pegawai</a>
-                <a href="http://">clear filter data</a>
-                <a class="btn btn-success btn-sm" href="/#">Export</a>
-                <a class="btn btn-success btn-sm" href="/#">Cetak</a>
-                </div>
+
+          <div class="col-md-4">
+            <a class="btn btn-success btn-sm" href="/#">Foto Pegawai</a>
+
+          </div>
+          <div class="col-md-3">
+            <a href="" style="">clear filter data</a>
+          </div>
+          <div class="col-md-5">
+            <a class="btn btn-success btn-sm" href="/#">Export</a>
+            <a class="btn btn-success btn-sm" href="/#">Cetak</a>
+
+
+        </div>
+
 
                 <br/>
                 <br/>
-                <div style="overflow-x:auto;">
+                <div class="col-12 col-sm-12 col-md-12"style="overflow-x:auto;">
                 <table class="table table-bordered">
 				<tr>
                         <th style="text-align:center" colspan ="14" >Detail Pegawai</th>

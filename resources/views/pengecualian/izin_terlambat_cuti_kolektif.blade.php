@@ -23,60 +23,60 @@
 
 <section>
 <body>
- 
+
  <div class="container">
      <div class="card">
          <div class="card-body">
-             
+
 
              <h3>Izin, Terlambat, Cuti - KOLEKTIF</h3>
              <br/>
 
              <div>
-             <a class="btn btn-success btn-sm" href="/#">Filter Data</a>             
+             <a class="btn btn-success btn-sm" href="/#">Filter Data</a>
              <a class="btn btn-success btn-sm" href="/#">Export</a>
              <a class="btn btn-success btn-sm" href="/#">Cetak</a>
              <a class="btn btn-success btn-sm" href="/#">Cetak Pegawai Kontrak</a>
              </div>
-             
+
              <br/>
              <br/>
-             <div style="overflow-x:auto;">
+             <div style="overflow-x:auto;"class="col-md-12" >
              <table class="table table-bordered">
                  <tr>
-                     <th style="border-style: solid;border-color: black">Tanggal Pengajuan</th>
-                     <th style="border-style: solid;border-color: black">Tanggal Mulai Izin</th>
-                     <th style="border-style: solid;border-color: black">Tanggal Akhir Izin</th>
-                     <th style="border-style: solid;border-color: black">Jenis Izin</th>
-                     <th style="border-style: solid;border-color: black">Kategori</th>
-                     <th style="border-style: solid;border-color: black">Catatan</th>
-                     
+                     <th >Tanggal Pengajuan</th>
+                     <th >Tanggal Mulai Izin</th>
+                     <th >Tanggal Akhir Izin</th>
+                     <th >Jenis Izin</th>
+                     <th >Kategori</th>
+                     <th >Catatan</th>
+
 
                  </tr>
-                 
+
                  <tr>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     
+                     <th ></th>
+                     <th ></th>
+                     <th ></th>
+                     <th ></th>
+                     <th ></th>
+                     <th ></th>
+
                  </tr>
-                 
+
              </table>
              </div>
-             
+
 
              <br/>
-             
+
              <div>
-             <a class="btn btn-success btn-sm" href="/#">Tambah</a>                         
+             <a class="btn btn-success btn-sm" href="/#">Tambah</a>
              </div>
 
              <br/>
 
-             
+
          </div>
      </div>
  </div>

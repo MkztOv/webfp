@@ -20,15 +20,16 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/profile','HomeController@profile');
-//methode untuk menu pegawai
+
+
+//route pegawai
 Route::get('/pegawai', 'HomeController@pegawai');
 Route::get('/aktif', 'HomeController@aktif');
 Route::get('/berhenti', 'HomeController@berhenti');
 Route::get('/detail', 'HomeController@detail');
 Route::get('/habis_kontrak', 'HomeController@habis');
-Route::get('/non_aktif', 'HomeController@nonaktif');
+Route::get('/nonaktif', 'HomeController@nonaktif');
 
 //route pengecualian
 Route::get('/izin_kolektif', 'HomeController@izin_kolektif');

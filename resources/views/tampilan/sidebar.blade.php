@@ -53,7 +53,7 @@
         <li class="treeview"> -->
 
           <li class="treeview">
-          <a href="{{ url('/aktif') }}"><i class="fa fa-link"></i><span>Pengecualian</span>
+          <a href="{{ url('#') }}"><i class="fa fa-link"></i><span>Pengecualian</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
