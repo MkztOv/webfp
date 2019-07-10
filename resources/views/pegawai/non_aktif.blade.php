@@ -19,7 +19,7 @@
 </section>
 
 <section>
-<div class="container">
+<div class="container-fluid">
 		<div class="card">
 			<div class="card-body">
 				<br/>

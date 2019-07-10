@@ -3,10 +3,7 @@
 <!-- ini untuk menu, ini muncul ketika link pada sidebar diklik -->
 
 <section class="content-header">
-  <h1>
-        Pegawai Berhenti
-
-  </h1>
+  <h1>Pegawai Berhenti</h1>
     <ol class="breadcrumb">
         <li>
             <a href="{{url('/home')}}"><i class="fa fa-home"></i>Home</a>
@@ -23,7 +20,7 @@
 <section>
 <body>
 
- <div class="container">
+ <div class="container-fluid">
      <div class="card">
          <div class="card-body">
              <br/>

@@ -10,8 +10,8 @@
     </ol>
 </div>
 
-<section class="content container-fluid">
-<div class="container">
+<section>
+<div class="container-fluid">
 <img src="dist\img\fp_pic.jpeg" alt="finger print picture" style="display: block; margin-left: auto; margin-right: auto; max-width:100%">
 </div>
 </section>

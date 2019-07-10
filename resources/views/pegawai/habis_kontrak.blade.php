@@ -19,7 +19,7 @@
 </section>
 
 <section>
-  <div class="container">
+  <div class="container-fluid">
 		<div class="card">
 			<div class="card-body">
 				<br/>
@@ -92,7 +92,7 @@
         </table>
         <br/>
         <br/>
-        <table class="table table-bordered">
+        <!-- <table class="table table-bordered">
           <tr>
             <th>Nama mobil</th>
             <th>&nbsp</th>
@@ -109,11 +109,11 @@
             </td>
             <td>&nbsp</td>
           </tr>
-        </table>
+        </table> -->
       </div>
       <br/>
       <br/>
-      <div style="overflow-x:auto">
+      <!-- <div style="overflow-x:auto">
         <table>
           <thead>
             <tr>
@@ -147,7 +147,7 @@
             </tr>
           </tbody>
         </table>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
