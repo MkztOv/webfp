@@ -23,15 +23,15 @@
 				<br/>
 
           <div class="col-md-4">
-            <a class="btn btn-success btn-sm" href="/#">Foto Pegawai</a>
+            <a class="btn btn-success btn-sm" href="#">Foto Pegawai</a>
 
           </div>
           <div class="col-md-3">
             <a href="" style="">clear filter data</a>
           </div>
           <div class="col-md-5">
-            <a class="btn btn-success btn-sm" href="/#">Export</a>
-            <a class="btn btn-success btn-sm" href="/#">Cetak</a>
+            <a class="btn btn-success btn-sm" href="#">Export</a>
+            <a class="btn btn-success btn-sm" href="#">Cetak</a>
 
 
         </div>

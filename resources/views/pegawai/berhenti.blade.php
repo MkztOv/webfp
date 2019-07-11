@@ -25,13 +25,13 @@
          <div class="card-body">
              <br/>
              <div>
-             <a class="btn btn-success btn-sm" href="/#">Tambah Pegawai</a>
-             <a class="btn btn-success btn-sm" href="/#">Tambah Pegawai</a>
+             <a class="btn btn-success btn-sm" href="#">Tambah Pegawai</a>
+             <a class="btn btn-success btn-sm" href="#">Tambah Pegawai</a>
              <a href="http://">clear filter data</a>
-             <a class="btn btn-success btn-sm" href="/#">Import</a>
-             <a class="btn btn-success btn-sm" href="/#">Export</a>
-             <a class="btn btn-success btn-sm" href="/#">Cetak</a>
-             <a class="btn btn-success btn-sm" href="/#">Cetak Pegawai Kontrak</a>
+             <a class="btn btn-success btn-sm" href="#">Import</a>
+             <a class="btn btn-success btn-sm" href="#">Export</a>
+             <a class="btn btn-success btn-sm" href="#">Cetak</a>
+             <a class="btn btn-success btn-sm" href="#">Cetak Pegawai Kontrak</a>
              </div>
 
              <br/>

@@ -37,6 +37,12 @@ class HomeController extends Controller
         return view('pegawai/aktif');
     }
 
+    //view tambah pegawai di dalam pegawai Aktif
+    public function TambahPegawai()
+    {
+      return view('pegawai/foldertambahpegawai/tambah_pegawai');
+    }
+
     public function berhenti(){
         return view('pegawai/berhenti');
     }
@@ -70,7 +76,7 @@ class HomeController extends Controller
     public function gantijadwal_perbagian() {
         return view('pengecualian/ganti_jadwal_kerja_perbagian');
     }
-    
+
     public function gantijadwal_perpegawai() {
         return view('pengecualian/ganti_jadwal_kerja_perpegawai');
     }

@@ -22,10 +22,14 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile','HomeController@profile');
 
+Route::get('/tambah_pegawai','PegawaiController@index');
 
 //route pegawai
 Route::get('/pegawai', 'HomeController@pegawai');
 Route::get('/aktif', 'HomeController@aktif');
+//route tambah Pegawai
+// Route::get('/tambah_pegawai','HomeController@TambahPegawai');
+
 Route::get('/berhenti', 'HomeController@berhenti');
 Route::get('/detail', 'HomeController@detail');
 Route::get('/habis_kontrak', 'HomeController@habis');
