@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -34,7 +35,9 @@ class HomeController extends Controller
     //method Pegawai
 
     public function aktif(){
-        return view('pegawai/aktif');
+      $pegawai = DB::table('pegawai')->paginate(10);
+      return view ('pegawai.aktif', ['pegawai'=>$pegawai]);
+      // return view('pegawai/aktif');
     }
 
     //view tambah pegawai di dalam pegawai Aktif

@@ -9,8 +9,8 @@ class PegawaiController extends Controller
 {
     public function index()
     {
-      $pegawai = DB::table('pegawai')->paginate(10);
-      return view ('pegawai.foldertambahpegawai.tambah_pegawai', ['pegawai'=>$pegawai]);
+      // $pegawai = DB::table('pegawai')->paginate(10);
+      // return view ('pegawai.aktif', ['pegawai'=>$pegawai]);
     }
 
     public function tambah(){

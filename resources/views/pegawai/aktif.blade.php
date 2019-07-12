@@ -19,7 +19,7 @@
 </section>
 <!-- akhir konten header -->
 
-<section>
+<section class="content">
 
 	<div class="container-fluid">
 		<div class="card">
@@ -118,84 +118,7 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
+
             </table>
           </div>
           <br/>
@@ -214,6 +137,37 @@
 			</div>
 		</div>
 	</div>
+  <br/>
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-body">
+        <h4>List Data Pegawai</h4>
+        <table class="table table-bordered">
+          <tr>
+            <th>ID</th>
+            <th>PIN</th>
+            <th>NIP</th>
+            <th>Nama</th>
+            <th>Alias</th>
+            <th>pegawai status</th>
+            <th>tanggal Mulai Kerja</th>
+          </tr>
+          @foreach($pegawai as $p)
+          <tr>
+            <td>{{$p->pegawai_id}}</td>
+            <td>{{$p->pegawai_pin}}</td>
+            <td>{{$p->pegawai_nip}}</td>
+            <td>{{$p->pegawai_nama}}</td>
+            <td>{{$p->pegawai_alias}}</td>
+            <td>{{$p->pegawai_status}}</td>
+            <td>{{$p->tgl_mulai_kerja}}</td>
+          </tr>
+          @endforeach
+        </table>
+        {{$pegawai->links()}}
+      </div>
+    </div>
+  </div>
 
 	</section>
 @endsection

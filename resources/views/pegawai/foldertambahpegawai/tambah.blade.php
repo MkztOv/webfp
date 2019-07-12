@@ -21,13 +21,13 @@
 
 <section>
 <body>
- 
+
 	<div class="container-fluid">
 		<div class="card">
 			<div class="card-body">
 				<h3>Tambah Pegawai Baru</h3>
-                
-    <a class="btn btn-info btn-sm" href="/aktif">Kembali</a>
+
+    <a class="btn btn-info btn-sm" href="{{url('/aktif')}}">Kembali</a>
     <br/>
     <br/>
 
@@ -54,7 +54,7 @@
     <label for="name">Tgl. Mulai Jadwal</label> <br/>
     <input type="text" name="tglmulai" required="requered"> <br/>
     </div>
-   
+
         <input class="btn btn-success btn-sm" type="submit" value="Simpan Data">
 
     </form>
