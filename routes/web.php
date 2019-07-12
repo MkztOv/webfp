@@ -23,7 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile','HomeController@profile');
 
 Route::get('/tambah_pegawai','PegawaiController@index');
-
+Route::get('/tambah','PegawaiController@tambah');
 //route pegawai
 Route::get('/pegawai', 'HomeController@pegawai');
 Route::get('/aktif', 'HomeController@aktif');

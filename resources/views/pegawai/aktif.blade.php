@@ -27,7 +27,7 @@
         <!-- <h3>Aktif</h3> -->
 				<br/>
           <div>
-            <a class="btn btn-success btn-sm" href="{{url('/tambah_pegawai')}}">Tambah Pegawai</a>
+            <a class="btn btn-success btn-sm" href="{{url('/tambah')}}">Tambah Pegawai</a>
             <!-- {{url('/tambah_pegawai')}} -->
             <a href="#">clear filter data</a>
             <a class="btn btn-success btn-sm" href="#">Import</a>

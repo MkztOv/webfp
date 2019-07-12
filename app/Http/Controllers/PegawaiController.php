@@ -12,4 +12,8 @@ class PegawaiController extends Controller
       $pegawai = DB::table('pegawai')->paginate(10);
       return view ('pegawai.foldertambahpegawai.tambah_pegawai', ['pegawai'=>$pegawai]);
     }
+
+    public function tambah(){
+      return view('pegawai.foldertambahpegawai.tambah');
+  }
 }
