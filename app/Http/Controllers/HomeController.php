@@ -37,7 +37,10 @@ class HomeController extends Controller
     public function aktif(){
       $pegawai = DB::table('pegawai')->paginate(10);
       return view ('pegawai.aktif', ['pegawai'=>$pegawai]);
+
       // return view('pegawai/aktif');
+      
+
     }
 
     //view tambah pegawai di dalam pegawai Aktif

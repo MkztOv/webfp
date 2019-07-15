@@ -10,11 +10,11 @@
         <li>
           <a href="{{url('/aktif')}}">Pegawai</a>
         </li>
+        <!-- <li>
+          <a href="{{url('/pg_aktif')}}">Aktif</a>
+        </li> -->
         <li>
-          <a href="{{url('/aktif')}}">Aktif</a>
-        </li>
-        <li>
-          <a class="active" href="{{url('/tambah_pegawai')}}">Tambah pegawai</a>
+          <a class="active" href="{{url('/tambah_pegawai')}}">Pegawai aktif</a>
         </li>
     </ol>
 </section>
@@ -23,19 +23,45 @@
     <div>
       <table class="table table-bordered">
         <tr>
-          <th>ID</th>
+          <th>Pegawai ID</th>
           <th>PIN</th>
           <th>NIP</th>
           <th>Nama</th>
-          <th>Alias</th>
+          <th>Jadwal Kerja</th>
+          <th>Tgl. Mulai Jadwal</th>
+          <th>Tempat Lahir</th>
+          <th>Tanggal Lahir</th>
+          <th>Jabatan</th>
+          <th>Departemen</th>
+          <th>Kantor</th>
+          <th>Password</th>
+          <th>RFID</th>
+          <th>No. Telp</th>
+          <th>Privilage</th>
+          <th>Status Pegawai</th>
+          <th>Tgl. Masuk Kerja</th>
+          <th>Tgl. Akhir Kontrak</th>
         </tr>
-        @foreach($pegawai as $p)
+        @foreach($pegawai_a as $ps)
         <tr>
-          <td>{{$p->pegawai_id}}</td>
-          <td>{{$p->pegawai_pin}}</td>
-          <td>{{$p->pegawai_nip}}</td>
-          <td>{{$p->pegawai_nama}}</td>
-          <td>{{$p->pegawai_alias}}</td>
+          <td>{{$ps->pegawai_id}}</td>
+          <td>{{$ps->pegawai_pin}}</td>
+          <td>{{$ps->pegawai_nip}}</td>
+          <td>{{$ps->pegawai_nama}}</td>
+          <td>{{$ps->jdw_kerja_m_name}}</td>
+          <td>{{$ps->jdw_kerja_m_mulai}}</td>
+          <td>{{$ps->tempat_lahir}}</td>
+          <td>{{$ps->tgl_lahir}}</td>
+          <td>{{$ps->pembagian1_nama}}</td>
+          <td>{{$ps->pembagian2_nama}}</td>
+          <td>{{$ps->pembagian3_nama}}</td>
+          <td>{{$ps->pegawai_pwd}}</td>
+          <td>{{$ps->pegawai_rfid}}</td>
+          <td>{{$ps->pegawai_telp}}</td>
+          <td>{{$ps->pegawai_privilege}}</td>
+          <td>{{$ps->pegawai_status}}</td>
+          <td>{{$ps->tgl_mulai_kerja}}</td>
+          <td>{{$ps->kontrak_end}}</td>
         </tr>
         @endforeach
       </table>

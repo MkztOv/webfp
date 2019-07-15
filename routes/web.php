@@ -27,6 +27,7 @@ Route::get('/tambah','PegawaiController@tambah');
 //route pegawai
 Route::get('/pegawai', 'HomeController@pegawai');
 Route::get('/aktif', 'HomeController@aktif');
+Route::get('/pg_aktif','PegawaiController@aktif_v');
 //route tambah Pegawai
 // Route::get('/tambah_pegawai','HomeController@TambahPegawai');
 

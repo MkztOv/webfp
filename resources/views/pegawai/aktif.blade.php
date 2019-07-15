@@ -26,6 +26,8 @@
 			<div class="card-body">
         <!-- <h3>Aktif</h3> -->
 				<br/>
+        <a href="{{url('/pg_aktif')}}">pg aktif</a>
+        <br/>
           <div>
             <a class="btn btn-success btn-sm" href="{{url('/tambah')}}">Tambah Pegawai</a>
             <!-- {{url('/tambah_pegawai')}} -->
@@ -57,12 +59,12 @@
                 <th>No. Telp</th>
                 <th>Privilage</th>
                 <th>Status Pegawai</th>
-                <th>FP ZK</th>
+                <!-- <th>FP ZK</th>
                 <th>FP Neo</th>
                 <th>FP Revo</th>
                 <th>FP Livo</th>
                 <th>FP UareU</th>
-                <th>Face</th>
+                <th>Face</th> -->
                 <th>Tgl. Masuk Kerja</th>
                 <th>Tgl. Akhir Kerja</th>
               </tr>
@@ -92,33 +94,6 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-
             </table>
           </div>
           <br/>

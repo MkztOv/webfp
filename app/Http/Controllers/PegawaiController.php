@@ -15,5 +15,17 @@ class PegawaiController extends Controller
 
     public function tambah(){
       return view('pegawai.foldertambahpegawai.tambah');
-  }
+    }
+
+    public function aktif_v()
+    {
+
+      // $pegawai_a = DB::select('call VIEW_P_AKTIF();');
+      // $model = New App\PegawaiAktif();
+      $pegawai_a = DB::select('call VIEW_P_AKTIF()');
+      return view ('pegawai.foldertambahpegawai.pg_aktif',['pegawai'=>$pegawai_a]);
+      // dump($pegawai_a);
+
+    }
+
 }
