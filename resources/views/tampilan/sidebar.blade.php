@@ -73,7 +73,7 @@
           </ul>
         </li>
 
-        <li class="treeview">
+        <li class="treeview"> 
           <a href="#"><i class="fa fa-link"></i><span>Mesin</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -86,14 +86,31 @@
         </li>
 
         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i><span>Laporan</span>
+          <a href="{{url('laporan')}}"><i class="fa fa-link"></i><span>Laporan</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">level menu a</a></li>
-            <li><a href="#">level menu b</a></li>
+            <li><a href="{{url('data_scanlog')}}">Data Scanlog</a></li>
+            <li><a href="{{url('kartu_scanlog')}}">Kartu Scanlog</a></li>
+            <li><a href="{{url('rincian_harian')}}">Rincian Harian</a></li>
+            <li><a href="{{url('shift_harian')}}">Shift Harian</a></li>
+            <li><a href="{{url('rekap_periode')}}">Rekap Periode</a></li>
+            <li><a href="{{url('cuti_normatif')}}">Cuti Normatif</a></li>
+            <li><a href="{{url('cuti_pribadi')}}">Cuti Pribadi</a></li>
+            <li><a href="{{url('datang_terlambat')}}">Datang Terlambat</a></li>
+            <li><a href="{{url('pulang_awal')}}">Pulang Awal</a></li>
+            <li><a href="{{url('scan_kerja_1x')}}">Scan Kerja 1x</a></li>
+            <li><a href="{{url('lembur')}}">Lembur</a></li>
+            <li><a href="{{url('istirahat_lebih')}}">Istirahat Lebih</a></li>
+            <li><a href="{{url('rekap_tambahan')}}">Rekap Tambahan</a></li>
+            <li><a href="{{url('scan_diluar_jadwal')}}">Scan Diluar Jadwal</a></li>
+            <li><a href="{{url('datang_terlambat_aktual')}}">Datang Terlambat Aktual</a></li>
+            <li><a href="{{url('pulang_awal_aktual')}}">Pulang Awal Aktual</a></li>
+            <li><a href="{{url('kartu_shift')}}">Kartu Shift</a></li>
+            <li><a href="{{url('rincian_tahunan')}}">Rincian Tahunan</a></li>
+           
           </ul>
         </li>
 

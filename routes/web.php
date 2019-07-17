@@ -49,4 +49,29 @@ Route::get('/tukarjam', 'HomeController@tukarjam');
 Route::get('/jadwallembur', 'HomeController@jadwallembur');
 Route::get('/kerjaextra', 'HomeController@kerjaextra');
 
-//route mesin
+//route laporan
+Route::get('/data_scanlog', 'HomeController@data_scanlog');
+Route::get('/kartu_scanlog', 'HomeController@kartu_scanlog');
+Route::get('/rincian_harian', 'HomeController@rincian_harian');	
+Route::get('/shift_harian', 'HomeController@shift_harian');	
+Route::get('/rekap_periode', 'HomeController@rekap_periode');
+Route::get('/cuti_normatif', 'HomeController@cuti_normatif');
+Route::get('/cuti_pribadi', 'HomeController@cuti_pribadi');
+Route::get('/datang_terlambat', 'HomeController@datang_terlambat');
+Route::get('/pulang_awal', 'HomeController@pulang_awal');
+Route::get('/scan_kerja_1x', 'HomeController@scan_kerja_1x');
+Route::get('/lembur', 'HomeController@lembur');
+Route::get('/istirahat_lebih', 'HomeController@istirahat_lebih');
+Route::get('/rekap_tambahan', 'HomeController@rekap_tambahan');
+Route::get('/scan_diluar_jadwal', 'HomeController@scan_diluar_jadwal');
+Route::get('/datang_terlambat_aktual', 'HomeController@datang_terlambat_aktual');
+Route::get('/pulang_awal_aktual', 'HomeController@pulang_awal_aktual');
+Route::get('/kartu_shift', 'HomeController@kartu_shift');
+Route::get('/rincian_tahunan', 'HomeController@rincian_tahunan');
+
+
+
+
+
+
+
