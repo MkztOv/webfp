@@ -25,9 +25,9 @@
 		<div class="card">
 			<div class="card-body">
         <!-- <h3>Aktif</h3> -->
-				<br/>
+				<!-- <br/>
         <a href="{{url('/pg_aktif')}}">pg aktif</a>
-        <br/>
+        <br/> -->
           <div>
             <a class="btn btn-success btn-sm" href="{{url('/tambah')}}">Tambah Pegawai</a>
             <!-- {{url('/tambah_pegawai')}} -->
@@ -43,11 +43,11 @@
           <div style="overflow-x:auto;">
             <table class="table table-bordered">
               <tr>
-    						<th>Pilih</th>
-    						<th>PIN</th>
-    						<th>NIP</th>
-    						<th>Nama</th>
-    						<th>Jadwal Kerja</th>
+                <th>Pegawai ID</th>
+                <th>PIN</th>
+                <th>NIP</th>
+                <th>Nama</th>
+                <th>Jadwal Kerja</th>
                 <th>Tgl. Mulai Jadwal</th>
                 <th>Tempat Lahir</th>
                 <th>Tanggal Lahir</th>
@@ -59,41 +59,32 @@
                 <th>No. Telp</th>
                 <th>Privilage</th>
                 <th>Status Pegawai</th>
-                <!-- <th>FP ZK</th>
-                <th>FP Neo</th>
-                <th>FP Revo</th>
-                <th>FP Livo</th>
-                <th>FP UareU</th>
-                <th>Face</th> -->
                 <th>Tgl. Masuk Kerja</th>
-                <th>Tgl. Akhir Kerja</th>
+                <th>Tgl. Akhir Kontrak</th>
               </tr>
+              @foreach($pegawai_a as $pa)
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+
+                <td>{{$pa->pegawai_id}}</td>
+                <td>{{$pa->pegawai_pin}}</td>
+                <td>{{$pa->pegawai_nip}}</td>
+                <td>{{$pa->pegawai_nama}}</td>
+                <td>{{$pa->jdw_kerja_m_name}}</td>
+                <td>{{$pa->jdw_kerja_m_mulai}}</td>
+                <td>{{$pa->tempat_lahir}}</td>
+                <td>{{$pa->tgl_lahir}}</td>
+                <td>{{$pa->pembagian1_nama}}</td>
+                <td>{{$pa->pembagian2_nama}}</td>
+                <td>{{$pa->pembagian3_nama}}</td>
+                <td>{{$pa->pegawai_pwd}}</td>
+                <td>{{$pa->pegawai_rfid}}</td>
+                <td>{{$pa->pegawai_telp}}</td>
+                <td>{{$pa->pegawai_privilege}}</td>
+                <td>{{$pa->pegawai_status}}</td>
+                <td>{{$pa->tgl_mulai_kerja}}</td>
+                <td>{{$pa->kontrak_end}}</td>
               </tr>
+              @endforeach
             </table>
           </div>
           <br/>
@@ -113,36 +104,7 @@
 		</div>
 	</div>
   <br/>
-  <div class="container-fluid">
-    <div class="card">
-      <div class="card-body">
-        <h4>List Data Pegawai</h4>
-        <table class="table table-bordered">
-          <tr>
-            <th>ID</th>
-            <th>PIN</th>
-            <th>NIP</th>
-            <th>Nama</th>
-            <th>Alias</th>
-            <th>pegawai status</th>
-            <th>tanggal Mulai Kerja</th>
-          </tr>
-          @foreach($pegawai as $p)
-          <tr>
-            <td>{{$p->pegawai_id}}</td>
-            <td>{{$p->pegawai_pin}}</td>
-            <td>{{$p->pegawai_nip}}</td>
-            <td>{{$p->pegawai_nama}}</td>
-            <td>{{$p->pegawai_alias}}</td>
-            <td>{{$p->pegawai_status}}</td>
-            <td>{{$p->tgl_mulai_kerja}}</td>
-          </tr>
-          @endforeach
-        </table>
-        {{$pegawai->links()}}
-      </div>
-    </div>
-  </div>
+
 
 	</section>
 @endsection

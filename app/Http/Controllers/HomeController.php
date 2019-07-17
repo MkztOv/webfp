@@ -35,11 +35,13 @@ class HomeController extends Controller
     //method Pegawai
 
     public function aktif(){
-      $pegawai = DB::table('pegawai')->paginate(10);
-      return view ('pegawai.aktif', ['pegawai'=>$pegawai]);
+      // $pegawai = DB::table('pegawai')->paginate(10);
+      // return view ('pegawai.aktif', ['pegawai'=>$pegawai]);
 
-      // return view('pegawai/aktif');
-      
+      $pegawai_a = DB::select('CALL VIEW_P_AKTIF()');
+      return view ('pegawai.aktif')->with([
+        'pegawai_a'=>$pegawai_a
+      ]);
 
     }
 
