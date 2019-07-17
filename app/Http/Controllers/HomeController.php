@@ -113,6 +113,77 @@ class HomeController extends Controller
         return view('pengecualian/kerja_extra_perhari');
     }
 
+    public function data_scanlog() {
+        return view('laporan/data_scanlog');
+    }
+
+    public function kartu_scanlog() {
+        return view('laporan/kartu_scanlog');
+    }
+
+    public function rincian_harian() {
+        return view('laporan/rincian_harian');
+    }
+
+    public function shift_harian() {
+        return view('laporan/shift_harian');
+    }
+
+    public function rekap_periode() {
+        return view('laporan/rekap_periode');
+    }
+
+    public function cuti_normatif() {
+        return view('laporan/cuti_normatif');
+    }
+
+    public function cuti_pribadi() {
+        return view('laporan/cuti_pribadi');
+    }
+
+    public function datang_terlambat() {
+        return view('laporan/datang_terlambat');
+    }
+
+    public function pulang_awal() {
+        return view('laporan/pulang_awal');
+    }
+
+    public function scan_kerja_1x() {
+        return view('laporan/scan_kerja_1x');
+    }
+
+    public function lembur() {
+        return view('laporan/lembur');
+    }
+
+    public function istirahat_lebih() {
+        return view ('laporan/istirahat_lebih');
+    }
+
+    public function rekap_tambahan() {
+        return view('laporan/rekap_tambahan');
+    }
+
+    public function scan_diluar_jadwal() {
+        return view('laporan/scan_diluar_jadwal');
+    }
+
+    public function datang_terlambat_aktual() {
+        return view('laporan/datang_terlambat_aktual');
+    }
+
+    public function pulang_awal_aktual() {
+        return view('laporan/pulang_awal_aktual');
+    }
+
+    public function kartu_shift() {
+        return view('laporan/kartu_shift');
+    }
+
+    public function rincian_tahunan() {
+        return view('laporan/rincian_tahunan');
+    }
 
 
 
