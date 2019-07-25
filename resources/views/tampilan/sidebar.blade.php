@@ -73,7 +73,7 @@
           </ul>
         </li>
 
-        <li class="treeview"> 
+        <li class="treeview">
           <a href="#"><i class="fa fa-link"></i><span>Mesin</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -84,6 +84,9 @@
             <li><a href="#">level menu b</a></li>
           </ul>
         </li>
+
+        <li><a href="/user"><i class="fa fa-link"></i><span>User</span></a></li>
+
 
         <li class="treeview">
           <a href="{{url('laporan')}}"><i class="fa fa-link"></i><span>Laporan</span>
@@ -110,7 +113,7 @@
             <li><a href="{{url('pulang_awal_aktual')}}">Pulang Awal Aktual</a></li>
             <li><a href="{{url('kartu_shift')}}">Kartu Shift</a></li>
             <li><a href="{{url('rincian_tahunan')}}">Rincian Tahunan</a></li>
-           
+
           </ul>
         </li>
 

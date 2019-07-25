@@ -23,60 +23,60 @@
 
 <section>
 <body>
- 
- <div class="container">
+
+ <div class="container-fluid">
      <div class="card">
          <div class="card-body">
-             
+
 
              <h3>Ganti Jadwal Kerja per Bagian</h3>
              <br/>
 
              <div>
-             <a class="btn btn-success btn-sm" href="/#">Filter Data</a>             
+             <a class="btn btn-success btn-sm" href="/#">Filter Data</a>
              <a class="btn btn-success btn-sm" href="/#">Export</a>
              <a class="btn btn-success btn-sm" href="/#">Cetak</a>
              </div>
-             
+
              <br/>
              <br/>
              <div style="overflow-x:auto;">
              <table class="table table-bordered">
                  <tr>
-                     <th style="border-style: solid;border-color: black">Tanggal Awal</th>
-                     <th style="border-style: solid;border-color: black">Tanggal Akhir</th>
-                     <th style="border-style: solid;border-color: black">Jabatan</th>
-                     <th style="border-style: solid;border-color: black">Departemen</th>
-                     <th style="border-style: solid;border-color: black">Kantor</th>
-                     <th style="border-style: solid;border-color: black">Jadwal Pengganti</th>
-                     <th style="border-style: solid;border-color: black">Keterangan</th>
-                     
+                     <th>Tanggal Awal</th>
+                     <th>Tanggal Akhir</th>
+                     <th>Jabatan</th>
+                     <th>Departemen</th>
+                     <th>Kantor</th>
+                     <th>Jadwal Pengganti</th>
+                     <th>Keterangan</th>
+
                  </tr>
-                 
+
                  <tr>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                                                               
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+
                  </tr>
-                 
+
              </table>
              </div>
-             
+
 
              <br/>
-             
+
              <div>
-             <a class="btn btn-success btn-sm" href="/#">Hapus</a>                         
+             <a class="btn btn-success btn-sm" href="/#">Hapus</a>
              </div>
 
              <br/>
 
-             
+
          </div>
      </div>
  </div>

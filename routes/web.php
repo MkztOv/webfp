@@ -27,7 +27,7 @@ Route::get('/tambah','PegawaiController@tambah');
 //route pegawai
 Route::get('/pegawai', 'HomeController@pegawai');
 Route::get('/aktif', 'HomeController@aktif');
-Route::get('/pg_aktif','PegawaiController@aktif_v');
+// Route::get('/pg_aktif','PegawaiController@aktif_v');
 //route tambah Pegawai
 // Route::get('/tambah_pegawai','HomeController@TambahPegawai');
 
@@ -52,8 +52,8 @@ Route::get('/kerjaextra', 'HomeController@kerjaextra');
 //route laporan
 Route::get('/data_scanlog', 'HomeController@data_scanlog');
 Route::get('/kartu_scanlog', 'HomeController@kartu_scanlog');
-Route::get('/rincian_harian', 'HomeController@rincian_harian');	
-Route::get('/shift_harian', 'HomeController@shift_harian');	
+Route::get('/rincian_harian', 'HomeController@rincian_harian');
+Route::get('/shift_harian', 'HomeController@shift_harian');
 Route::get('/rekap_periode', 'HomeController@rekap_periode');
 Route::get('/cuti_normatif', 'HomeController@cuti_normatif');
 Route::get('/cuti_pribadi', 'HomeController@cuti_pribadi');
@@ -69,9 +69,5 @@ Route::get('/pulang_awal_aktual', 'HomeController@pulang_awal_aktual');
 Route::get('/kartu_shift', 'HomeController@kartu_shift');
 Route::get('/rincian_tahunan', 'HomeController@rincian_tahunan');
 
-
-
-
-
-
-
+//route user
+Route::get('/user','HomeController@listuser');

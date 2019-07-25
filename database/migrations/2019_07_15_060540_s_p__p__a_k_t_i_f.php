@@ -14,7 +14,9 @@ class SPPAKTIF extends Migration
      */
     public function up()
     {
-        DB::unprepared('CREATE PROCEDURE VIEW_P_AKTIF()
+        DB::unprepared('
+        DROP PROCEDURE IF EXISTS `VIEW_P_AKTIF`;
+        CREATE PROCEDURE VIEW_P_AKTIF()
         BEGIN
         SELECT p.pegawai_id, p.pegawai_pin, p.pegawai_nip, p.pegawai_nama,
               jdw_kerja_m_name, jdw_kerja_m_mulai, p.tempat_lahir,
@@ -47,6 +49,6 @@ class SPPAKTIF extends Migration
      */
     public function down()
     {
-        DB::unprepared('DROP PROCEDURE IF EXISTS VIEW_P_AKTIF();');
+        Schema::dropIfExists('VIEW_P_AKTIF();');
     }
 }

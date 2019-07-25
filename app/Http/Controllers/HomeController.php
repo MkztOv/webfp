@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class HomeController extends Controller
 {
@@ -31,17 +32,33 @@ class HomeController extends Controller
     {
         return view('tampilan.profile');
     }
+    public function Postlogin(Request $request)
+    {
+      dd($request->all());
+    }
 
     //method Pegawai
 
-    public function aktif(){
+    public function aktif(Request $request){
       // $pegawai = DB::table('pegawai')->paginate(10);
       // return view ('pegawai.aktif', ['pegawai'=>$pegawai]);
 
-      $pegawai_a = DB::select('CALL VIEW_P_AKTIF()');
-      return view ('pegawai.aktif')->with([
-        'pegawai_a'=>$pegawai_a
-      ]);
+      // $pegawai_a = DB::select('CALL VIEW_P_AKTIF()');
+      // $pegawai_a = pegawai::all();
+      // $pegawai_a = $model->hydrate(DB::select('CALL VIEW_P_AKTIF()'));
+      // return view ('pegawai.aktif')->with([
+      //   'pegawai_a'=>$pegawai_a
+      // ]);
+
+      $page = request('page',4);
+      $pageSize = 20;
+      $results = DB::select(DB::raw('CALL VIEW_P_AKTIF()'));
+      $offset = ($page * $pageSize) - $pageSize;
+      $data = array_slice($results, $offset, $pageSize, true);
+      $pegawai_a = new LengthAwarePaginator($data, count($data), $pageSize, $page);
+
+      return view ('pegawai.aktif')->with(['pegawai_a'=>$pegawai_a]);
+
 
     }
 
@@ -185,6 +202,10 @@ class HomeController extends Controller
         return view('laporan/rincian_tahunan');
     }
 
+    public function listuser()
+    {
+      return view('pengguna/user');
+    }
 
 
 

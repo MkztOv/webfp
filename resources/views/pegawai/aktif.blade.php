@@ -32,6 +32,15 @@
             <a class="btn btn-success btn-sm" href="{{url('/tambah')}}">Tambah Pegawai</a>
             <!-- {{url('/tambah_pegawai')}} -->
             <a href="#">clear filter data</a>
+            <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">button dropdown
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Dropdown link</a></li>
+                          <li><a href="#">Dropdown link</a></li>
+                        </ul>
+                      </div>
             <a class="btn btn-success btn-sm" href="#">Import</a>
             <a class="btn btn-success btn-sm" href="#">Export</a>
             <a class="btn btn-success btn-sm" href="#">Cetak</a>
@@ -40,7 +49,7 @@
 
             <br/>
             <br/>
-          <div style="overflow-x:auto;">
+          <div class="col-md-12" style="overflow-x:auto;">
             <table class="table table-bordered">
               <tr>
                 <th>Pegawai ID</th>
@@ -86,6 +95,11 @@
               </tr>
               @endforeach
             </table>
+
+          </div>
+          <div>
+            {{ $pegawai_a->links() }}
+
           </div>
           <br/>
           <br/>

@@ -68,7 +68,7 @@ desired effect
     <!-- Main content -->
     <!-- dipanggil dengan @yield('kontent')
          *konten itu nama variabel di file dashboard.blade.php -->
-    @yield('konten')
+    <!-- @yield('konten') -->
     <!--------------------------
         | Your Page Content Here |
         -------------------------->

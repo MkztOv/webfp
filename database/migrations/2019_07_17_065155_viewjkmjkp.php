@@ -15,7 +15,9 @@ class Viewjkmjkp extends Migration
      */
     public function up()
     {
-      DB::unprepared('CREATE VIEW `jkm_with_jkp` AS
+      DB::unprepared('
+
+        CREATE OR REPLACE VIEW `jkm_with_jkp` AS
         SELECT
         `jp`.`pegawai_id` AS `pegawai_id`,
         `jp`.`jdw_kerja_m_id` AS `jdw_kerja_m_id`,
@@ -35,6 +37,6 @@ class Viewjkmjkp extends Migration
      */
     public function down()
     {
-          DB::unprepared('DROP view IF EXISTS VIEW_P_AKTIF();');
+        Schema::dropIfExists('jkm_with_jkp');
     }
 }

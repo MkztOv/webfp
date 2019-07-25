@@ -14,7 +14,9 @@ class StoredProcedurePegawai extends Migration
      */
     public function up()
     {
-        DB::unprepared('CREATE PROCEDURE view_p() BEGIN
+        DB::unprepared('
+            DROP PROCEDURE IF EXISTS `view_p`;
+            CREATE PROCEDURE view_p() BEGIN
             Select * from pegawai; END');
     }
 
@@ -25,6 +27,6 @@ class StoredProcedurePegawai extends Migration
      */
     public function down()
     {
-      DB::unprepared('DROP PROCEDURE IF EXISTS view_p();');
+      Schema::dropIfExists('view_p();');
     }
 }
