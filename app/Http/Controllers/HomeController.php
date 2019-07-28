@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use DB;
+use App\Http\Controllers\Controller;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 class HomeController extends Controller
@@ -32,6 +33,7 @@ class HomeController extends Controller
     {
         return view('tampilan.profile');
     }
+
     public function Postlogin(Request $request)
     {
       dd($request->all());
@@ -39,7 +41,7 @@ class HomeController extends Controller
 
     //method Pegawai
 
-    public function aktif(Request $request){
+    public function aktif(){
       // $pegawai = DB::table('pegawai')->paginate(10);
       // return view ('pegawai.aktif', ['pegawai'=>$pegawai]);
 
@@ -50,15 +52,41 @@ class HomeController extends Controller
       //   'pegawai_a'=>$pegawai_a
       // ]);
 
-      $page = request('page',4);
-      $pageSize = 20;
-      $results = DB::select(DB::raw('CALL VIEW_P_AKTIF()'));
-      $offset = ($page * $pageSize) - $pageSize;
-      $data = array_slice($results, $offset, $pageSize, true);
-      $pegawai_a = new LengthAwarePaginator($data, count($data), $pageSize, $page);
+      // $page = request('page',4);
+      // $pageSize = 20;
+      // $results = DB::select(DB::raw('CALL VIEW_P_AKTIF()'));
+      // $offset = ($page * $pageSize) - $pageSize;
+      // $data = array_slice($results, $offset, $pageSize, true);
+      // $pegawai_a = new LengthAwarePaginator($data, count($data), $pageSize, $page);
+      //
+      $pegawai_a = DB::table('pegawai')
+                      ->leftJoin('jkm_with_jkp',
+                                 'pegawai.pegawai_id','=','jkm_with_jkp.pegawai_id')
+                      ->leftJoin('pembagian1',
+                                  'pegawai.pembagian1_id','=','pembagian1.pembagian1_id')
+                      ->leftJoin('pembagian2',
+                                 'pegawai.pembagian2_id','=','pembagian2.pembagian2_id')
+                      ->leftJoin('pembagian3',
+                                 'pegawai.pembagian3_id','=','pembagian3.pembagian3_id')
+                      ->leftJoin('kontrak_kerja',
+                                 'pegawai.pegawai_id','=','kontrak_kerja.pegawai_id')
+                      ->select('pegawai.pegawai_id','pegawai.pegawai_pin','pegawai.pegawai_nip','pegawai.pegawai_nama',
+                               'jkm_with_jkp.jdw_kerja_m_name','jkm_with_jkp.jdw_kerja_m_mulai',
+                               'pegawai.tempat_lahir','pegawai.tgl_lahir','pembagian1.pembagian1_nama',
+                               'pembagian2.pembagian2_nama','pembagian3.pembagian3_nama',
+                               'pegawai.pegawai_pwd','pegawai.pegawai_rfid','pegawai.pegawai_telp',
+                               'pegawai.pegawai_privilege','pegawai.pegawai_status','pegawai.tgl_mulai_kerja','kontrak_kerja.kontrak_end')
+                      ->paginate(15);
+      return view ('pegawai.aktif',compact('pegawai_a'));
 
-      return view ('pegawai.aktif')->with(['pegawai_a'=>$pegawai_a]);
+// ->with(['pegawai_a'=>$pegawai_a])
+    }
 
+    //user list
+    public function inputdt (Request $request)
+    {
+      \App\User::create($request->all());
+      return redirect('/user')->with('Berhasil','Data telah masuk');
 
     }
 
@@ -204,7 +232,8 @@ class HomeController extends Controller
 
     public function listuser()
     {
-      return view('pengguna/user');
+      $users = \App\userlist::all();
+      return view('pengguna/user',['users'=>$users]);
     }
 
 

@@ -31,9 +31,10 @@
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">Sidebar header</li>
+        <!-- <li class="header">Sidebar header</li> -->
         <!-- Optionally, you can add icons to the links -->
         <!-- <li class="active"><a href="{{ url('/pegawai') }}"><i class="fa fa-link"></i> <span>Pegawai</span></a></li> -->
+        @if(auth()->user()->role == 'admin')
         <li class="treeview">
           <a href="{{ url('/aktif') }}"><i class="fa fa-link"></i><span>Pegawai</span>
             <span class="pull-right-container">
@@ -87,7 +88,7 @@
 
         <li><a href="/user"><i class="fa fa-link"></i><span>User</span></a></li>
 
-
+        @endif
         <li class="treeview">
           <a href="{{url('laporan')}}"><i class="fa fa-link"></i><span>Laporan</span>
             <span class="pull-right-container">
@@ -98,6 +99,7 @@
             <li><a href="{{url('data_scanlog')}}">Data Scanlog</a></li>
             <li><a href="{{url('kartu_scanlog')}}">Kartu Scanlog</a></li>
             <li><a href="{{url('rincian_harian')}}">Rincian Harian</a></li>
+            @if(auth()->user()->role == 'admin')
             <li><a href="{{url('shift_harian')}}">Shift Harian</a></li>
             <li><a href="{{url('rekap_periode')}}">Rekap Periode</a></li>
             <li><a href="{{url('cuti_normatif')}}">Cuti Normatif</a></li>
@@ -113,10 +115,11 @@
             <li><a href="{{url('pulang_awal_aktual')}}">Pulang Awal Aktual</a></li>
             <li><a href="{{url('kartu_shift')}}">Kartu Shift</a></li>
             <li><a href="{{url('rincian_tahunan')}}">Rincian Tahunan</a></li>
-
+            @endif
           </ul>
         </li>
 
+        <!--
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i><span>Pengaturan</span>
             <span class="pull-right-container">
@@ -127,8 +130,7 @@
             <li><a href="#">level menu a</a></li>
             <li><a href="#">level menu b</a></li>
           </ul>
-        </li>
-
+        </li> -->
       </ul>
       <!-- /.sidebar-menu -->
     </section>

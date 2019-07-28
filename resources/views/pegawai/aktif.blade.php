@@ -20,10 +20,10 @@
 <!-- akhir konten header -->
 
 <section class="content">
-
-	<div class="container-fluid">
-		<div class="card">
-			<div class="card-body">
+<div class="row">
+	<div class="container-fluid col-xs-12">
+		<div class="box">
+			<div class="box-body">
         <!-- <h3>Aktif</h3> -->
 				<!-- <br/>
         <a href="{{url('/pg_aktif')}}">pg aktif</a>
@@ -33,14 +33,14 @@
             <!-- {{url('/tambah_pegawai')}} -->
             <a href="#">clear filter data</a>
             <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">button dropdown
-                          <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a href="#">Dropdown link</a></li>
-                          <li><a href="#">Dropdown link</a></li>
-                        </ul>
-                      </div>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">button dropdown
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Dropdown link</a></li>
+              <li><a href="#">Dropdown link</a></li>
+            </ul>
+          </div>
             <a class="btn btn-success btn-sm" href="#">Import</a>
             <a class="btn btn-success btn-sm" href="#">Export</a>
             <a class="btn btn-success btn-sm" href="#">Cetak</a>
@@ -49,8 +49,9 @@
 
             <br/>
             <br/>
-          <div class="col-md-12" style="overflow-x:auto;">
-            <table class="table table-bordered">
+          <div style="overflow-x:auto;">
+            <table class="table table-bordered table-hover">
+              <thead>
               <tr>
                 <th>Pegawai ID</th>
                 <th>PIN</th>
@@ -71,9 +72,10 @@
                 <th>Tgl. Masuk Kerja</th>
                 <th>Tgl. Akhir Kontrak</th>
               </tr>
+            </thead>
+            <tbody>
               @foreach($pegawai_a as $pa)
               <tr>
-
                 <td>{{$pa->pegawai_id}}</td>
                 <td>{{$pa->pegawai_pin}}</td>
                 <td>{{$pa->pegawai_nip}}</td>
@@ -94,6 +96,27 @@
                 <td>{{$pa->kontrak_end}}</td>
               </tr>
               @endforeach
+            </tbody>
+            <tfoot>
+              <th>Pegawai ID</th>
+              <th>PIN</th>
+              <th>NIP</th>
+              <th>Nama</th>
+              <th>Jadwal Kerja</th>
+              <th>Tgl. Mulai Jadwal</th>
+              <th>Tempat Lahir</th>
+              <th>Tanggal Lahir</th>
+              <th>Jabatan</th>
+              <th>Departemen</th>
+              <th>Kantor</th>
+              <th>Password</th>
+              <th>RFID</th>
+              <th>No. Telp</th>
+              <th>Privilage</th>
+              <th>Status Pegawai</th>
+              <th>Tgl. Masuk Kerja</th>
+              <th>Tgl. Akhir Kontrak</th>
+            </tfoot>
             </table>
 
           </div>
@@ -117,6 +140,7 @@
 			</div>
 		</div>
 	</div>
+</div>
   <br/>
 
 

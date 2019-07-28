@@ -33,7 +33,7 @@
 
   <div class="register-box-body">
     <p class="login-box-msg">Tambah User baru</p>
-
+    <!-- ini warning klo ada error -->
     @error('role')
     <div class="callout callout-danger">
         <strong>{{$message}}</strong>
@@ -44,6 +44,7 @@
         <strong>{{$message}}</strong>
     </div>
     @enderror
+    <!-- akhir warning klo ada error -->
 
     <form action="{{ route('register') }}" method="POST">
       @csrf
