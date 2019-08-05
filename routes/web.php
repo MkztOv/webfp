@@ -17,7 +17,25 @@ Route::get('/', function () {
 
 // Route::get('/home1','HomeController@index2')->name('home');
 
-Auth::routes();
+// Auth::routes();
+//route utk Authorize
+Route::group(['namespace'=>'Auth'],function(){
+
+  // Authentication Routes...
+  Route::get('login', 'LoginController@showLoginForm')->name('login');
+  Route::post('login', 'LoginController@login');
+  Route::post('logout', 'LoginController@logout')->name('logout');
+
+  // Password Reset Routes...
+  // Route::get('password/reset', 'ForgotPasswordController@showLinkRequestForm')->name('password.reset');
+  // Route::post('password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+  // Route::get('password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset.token');
+  // Route::post('password/reset', 'ResetPasswordController@reset');
+  // Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+  // Route::post('register', 'Auth\RegisterController@register');
+});
+
+//route utk Authorize
 
 //middleware
 Route::group(['middleware'=> ['auth','checkRole:admin']], function(){
@@ -65,6 +83,7 @@ Route::group(['middleware'=> ['auth','checkRole:admin']], function(){
 
       //route user
       Route::get('/user','HomeController@listuser');
+      Route::post('/user/create','HomeController@create');
 
 });
 

@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use DB;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Hash;
+// use Illuminate\Pagination\LengthAwarePaginator;
+// use App\User;
 
 class HomeController extends Controller
 {
@@ -83,12 +85,25 @@ class HomeController extends Controller
     }
 
     //user list
-    public function inputdt (Request $request)
+    public function create (Request $request)
     {
-      \App\User::create($request->all());
+      //input ke tabel user
+      $user = new \App\User;
+      $user->name = $request->name;
+      $user->email = $request->email;
+      // $user->password = bcrypt('$request->password');
+      $user->password = Hash::make($request->password);
+      $user->role = $request->role;
+      $user->remember_token = str_random(10);
+      $user->save();
+      //
+      // User::create($request->all());
       return redirect('/user')->with('Berhasil','Data telah masuk');
-
+      // return $request->all();
     }
+
+
+    //user list
 
     //view tambah pegawai di dalam pegawai Aktif
     public function TambahPegawai()
