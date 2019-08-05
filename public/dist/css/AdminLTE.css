@@ -1,6 +1,6 @@
 /*!
- * AdminLTE v2.4.12
- *
+ * AdminLTE v2.4.15
+ * 
  *   Author:  Colorlib
  *   Support: <https://github.com/ColorlibHQ/AdminLTE/issues>
  *   Repository: git://github.com/ColorlibHQ/AdminLTE.git
@@ -87,9 +87,14 @@ body {
   }
 }
 .content-wrapper {
-  min-height: calc(100% - 102px);
+  min-height: calc(100vh - 101px);
   background-color: #ecf0f5;
   z-index: 800;
+}
+@media (max-width: 767px) {
+  .content-wrapper {
+    min-height: calc(100vh - 151px);
+  }
 }
 .main-footer {
   background: #fff;
@@ -263,6 +268,13 @@ a:focus {
 .main-header .sidebar-toggle:active {
   background: transparent;
 }
+.main-header .sidebar-toggle.fa5 {
+  font-family: "Font Awesome\ 5 Free";
+}
+.main-header .sidebar-toggle.fa5:before {
+  content: "\f0c9";
+  font-weight: 900;
+}
 .main-header .sidebar-toggle .icon-bar {
   display: none;
 }
@@ -296,11 +308,39 @@ a:focus {
   font-weight: 300;
   overflow: hidden;
 }
+.main-header .logo img {
+  padding: 4px;
+  object-fit: contain;
+  margin: 0 auto;
+}
 .main-header .logo .logo-lg {
   display: block;
 }
+.main-header .logo .logo-lg img {
+  max-width: 200px;
+  max-height: 50px;
+}
+.main-header .logo .logo-lg .brandlogo-image {
+  margin-top: 8px;
+  margin-right: 10px;
+  margin-left: -5px;
+}
 .main-header .logo .logo-mini {
   display: none;
+}
+.main-header .logo .logo-mini img {
+  max-width: 50px;
+  max-height: 50px;
+}
+.main-header .logo .logo-mini .brandlogo-image {
+  margin-top: 8px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.main-header .logo .brandlogo-image {
+  float: left;
+  height: 34px;
+  width: auto;
 }
 .main-header .navbar-brand {
   color: #fff;
@@ -593,6 +633,7 @@ a:focus {
   .sidebar-mini.sidebar-collapse .sidebar-menu > li > a > span,
   .sidebar-mini.sidebar-collapse .sidebar-menu > li > .treeview-menu,
   .sidebar-mini.sidebar-collapse .sidebar-menu > li > a > .pull-right,
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li > a > span > .pull-right,
   .sidebar-mini.sidebar-collapse .sidebar-menu li.header {
     display: none !important;
     -webkit-transform: translateZ(0);
@@ -2649,16 +2690,16 @@ a:focus {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  border-top: 1px solid black;
+  border-top: 1px solid #f4f4f4;
 }
 .table > thead > tr > th {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #f4f4f4;
 }
 .table tr td .progress {
   margin-top: 5px;
 }
 .table-bordered {
-  border: 1px solid black;
+  border: 1px solid #f4f4f4;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
@@ -2666,7 +2707,7 @@ a:focus {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid black;
+  border: 1px solid #f4f4f4;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
