@@ -42,6 +42,7 @@
             <th>email</th>
             <th>role</th>
             <th>password</th>
+            <th>opsi</th>
           </tr>
         </thead>
         <tbody>
@@ -51,6 +52,10 @@
             <td>{{$user->email}}</td>
             <td>{{$user->role}}</td>
             <td>{{$user->password}}</td>
+            <td>
+							<a class="btn btn-warning btn-sm" href="#">Edit</a>
+							<a class="btn btn-danger btn-sm" href="#">Hapus</a>
+						</td>
           </tr>
           @endforeach
         </tbody>

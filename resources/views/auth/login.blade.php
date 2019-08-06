@@ -32,9 +32,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="{{ asset('plugins/iCheck/square/blue.css') }}">
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <style type="text/css">
+            #main {
+                background-image: url('dist/img/63.jpg');
+                background-size:cover;
+                height: 100%;
+                width: 100%;
+            }
+        </style>
 
 </head>
-<body class="hold-transition login-page">
+<body id ="main" class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
     <a href="/"><b>Simmon </b>web SDM</a>
