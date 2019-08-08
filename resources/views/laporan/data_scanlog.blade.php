@@ -26,7 +26,7 @@
 
     <div class="box">
         <div class="box-body">
-    
+
             <div class="col-3">
                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action
                   <span class="fa fa-caret-down"></span></button>
@@ -63,65 +63,72 @@
                     </ul>
                 </div>
 
-            
+
 
     </div>
     </div>
 
- 
+
  <div class="container-fluid">
      <div class="card">
          <div class="card-body">
-             
-             <h3>Data Scanlog</h3>
-             
+           <div class="box">
+             <div class="box-header">
+               <h3>Data Scanlog</h3>
+
+             </div>
+             <div class="box-body">
+               <div style="overflow-x:auto;">
+                 <table class="table table-bordered">
+                   <tr>
+                     <th>Tanggal Scan</th>
+                     <th>Tanggal</th>
+                     <th>Jam</th>
+                     <th>PIN</th>
+                     <th>NIP</th>
+                     <th>Nama</th>
+                     <th>Jabatan</th>
+                     <th>Departement</th>
+                     <th>Kantor</th>
+                     <th>Verifikasi</th>
+                     <th>I/O</th>
+                     <th>Workcode</th>
+                     <th>SN</th>
+                     <th>Mesin</th>
+                     <th>Koneksi</th>
+                     <th>IP Address</th>
+
+                   </tr>
+                   
+                   <tr>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+
+
+                   </tr>
+
+                 </table>
+               </div>
+
+             </div>
+           </div>
+
              <br/>
 
-              <div style="overflow-x:auto;">
-             <table class="table table-bordered">
-                 <tr>
-                     <th style="border-style: solid;border-color: black">Tanggal Scan</th>
-                     <th style="border-style: solid;border-color: black">Tanggal</th>
-                     <th style="border-style: solid;border-color: black">Jam</th>
-                     <th style="border-style: solid;border-color: black">PIN</th>
-                     <th style="border-style: solid;border-color: black">NIP</th>
-                     <th style="border-style: solid;border-color: black">Nama</th>
-                     <th style="border-style: solid;border-color: black">Jabatan</th>
-                     <th style="border-style: solid;border-color: black">Departement</th>
-                     <th style="border-style: solid;border-color: black">Kantor</th>
-                     <th style="border-style: solid;border-color: black">Verifikasi</th>
-                     <th style="border-style: solid;border-color: black">I/O</th>
-                     <th style="border-style: solid;border-color: black">Workcode</th>
-                     <th style="border-style: solid;border-color: black">SN</th>
-                     <th style="border-style: solid;border-color: black">Mesin</th>
-                     <th style="border-style: solid;border-color: black">Koneksi</th>
-                     <th style="border-style: solid;border-color: black">IP Address</th>
-      
-                 </tr>
-                 
-                 <tr>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-
-                                          
-                 </tr>
-                 
-             </table>
-             </div>
 
          </div>
      </div>

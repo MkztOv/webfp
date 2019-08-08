@@ -102,6 +102,12 @@ class HomeController extends Controller
       // return $request->all();
     }
 
+    // public function kehadiran()
+    // {
+    //   $kehadiran = DB::table('att_log')
+    //                    ->select('pin','')
+    // }
+
 
     //user list
 
