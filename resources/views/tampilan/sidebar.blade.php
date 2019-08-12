@@ -86,7 +86,7 @@
           </ul>
         </li>
 
-        <li><a href="/user"><i class="fa fa-link"></i><span>User</span></a></li>
+        <li><a href="{{url('user')}}"><i class="fa fa-link"></i><span>User</span></a></li>
 
         @endif
         <li class="treeview">

@@ -65,6 +65,13 @@ Route::group(['middleware'=> ['auth','checkRole:admin']], function(){
       Route::get('/kerjaextra', 'HomeController@kerjaextra');
 
       //route laporan
+
+      //data scan log nantinya admin bisa lihat semua pegawai
+
+      // Route::get('/data_scanlog', 'HomeController@searchScanLog');
+      //
+      //
+
       Route::get('/shift_harian', 'HomeController@shift_harian');
       Route::get('/rekap_periode', 'HomeController@rekap_periode');
       Route::get('/cuti_normatif', 'HomeController@cuti_normatif');
@@ -93,7 +100,9 @@ Route::group(['middleware'=> ['auth','checkRole:admin,pkl,staff']], function(){
 
   /*data Laporan
   harian user*/
+  //data scan log nantinya hanya menampilkan data user yang sedang login
   Route::get('/data_scanlog', 'HomeController@data_scanlog');
+  //
   Route::get('/kartu_scanlog', 'HomeController@kartu_scanlog');
   Route::get('/rincian_harian', 'HomeController@rincian_harian');
 });

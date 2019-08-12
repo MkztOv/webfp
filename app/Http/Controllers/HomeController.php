@@ -198,8 +198,19 @@ class HomeController extends Controller
         return view('pengecualian/kerja_extra_perhari');
     }
 
-    public function data_scanlog() {
-        return view('laporan/data_scanlog');
+    public function data_scanlog(Request $request)
+    {
+        if ($request->has('cari')) {
+          $kehadiran = DB::table('att_log')
+                           ->select('scan_date','pin','sn')
+                           ->where('pin','like',"%".$request->cari."%")
+                           ->paginate(15);
+        }else{
+          $kehadiran = DB::table('att_log')
+                           ->select('scan_date','pin','sn')
+                           ->paginate(15);
+        }
+        return view ('laporan.data_scanlog',compact('kehadiran'));
     }
 
     public function kartu_scanlog() {

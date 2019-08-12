@@ -23,10 +23,19 @@
 
 <section>
 <body>
-
-    <div class="box">
+    @if(auth()->user()->role == 'admin')
+    <div class="card-box">
+      <div class="box">
         <div class="box-body">
-    
+          <form action="{{url('/data_scanlog')}}" method="GET">
+            <input type="text" name="cari" placeholder="Cari pin.." value="{{ old('cari') }}">
+            <input type="submit" value="CARI">
+          </form>
+        </div>
+      </div>
+
+        <!-- <div class="box-body">
+
             <div class="col-3">
                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action
                   <span class="fa fa-caret-down"></span></button>
@@ -61,68 +70,95 @@
                         <li class="divider"></li>
                         <li><a href="#">Separated link</a></li>
                     </ul>
-                </div>
-
-            
-
+                </div> -->
     </div>
-    </div>
+    @endif
 
- 
+
  <div class="container-fluid">
      <div class="card">
          <div class="card-body">
-             
-             <h3>Data Scanlog</h3>
-             
-             <br/>
+           <div class="box">
+             <div class="box-header">
+               <h3>Data Scanlog</h3>
 
-              <div style="overflow-x:auto;">
-             <table class="table table-bordered">
-                 <tr>
-                     <th style="border-style: solid;border-color: black">Tanggal Scan</th>
-                     <th style="border-style: solid;border-color: black">Tanggal</th>
-                     <th style="border-style: solid;border-color: black">Jam</th>
-                     <th style="border-style: solid;border-color: black">PIN</th>
-                     <th style="border-style: solid;border-color: black">NIP</th>
-                     <th style="border-style: solid;border-color: black">Nama</th>
-                     <th style="border-style: solid;border-color: black">Jabatan</th>
-                     <th style="border-style: solid;border-color: black">Departement</th>
-                     <th style="border-style: solid;border-color: black">Kantor</th>
-                     <th style="border-style: solid;border-color: black">Verifikasi</th>
-                     <th style="border-style: solid;border-color: black">I/O</th>
-                     <th style="border-style: solid;border-color: black">Workcode</th>
-                     <th style="border-style: solid;border-color: black">SN</th>
-                     <th style="border-style: solid;border-color: black">Mesin</th>
-                     <th style="border-style: solid;border-color: black">Koneksi</th>
-                     <th style="border-style: solid;border-color: black">IP Address</th>
-      
-                 </tr>
-                 
-                 <tr>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-                     <th style="border-style: solid;border-color: black"></th>
-
-                                          
-                 </tr>
-                 
-             </table>
              </div>
-
+             <div class="box-body">
+               <div style="overflow-x:auto;">
+                 <table class="table table-bordered">
+                   <thead>
+                     <tr>
+                       <th>Tanggal Scan</th>
+                       <th>Tanggal</th>
+                       <th>Jam</th>
+                       <th>PIN</th>
+                       <!-- <th>NIP</th> -->
+                       <!-- <th>Nama</th> -->
+                       <!-- <th>Jabatan</th> -->
+                       <!-- <th>Departement</th> -->
+                       <!-- <th>Kantor</th> -->
+                       <!-- <th>Verifikasi</th> -->
+                       <!-- <th>I/O</th> -->
+                       <!-- <th>Workcode</th> -->
+                       <th>SN</th>
+                       <!-- <th>Mesin</th> -->
+                       <!-- <th>Koneksi</th> -->
+                       <!-- <th>IP Address</th> -->
+                     </tr>
+                   </thead>
+                   <tbody>
+                     {{--Comment: ini utk mengecek role user = admin? --}}
+                     @if(auth()->user()->role == 'admin')
+                      @foreach($kehadiran as $k)
+                     <tr>
+                       <td>{{$k->scan_date}}</th>
+                       <td>{{ date('l, j-F-Y',strtotime($k->scan_date))}}</th>
+                       <td>{{ date('H:i:s',strtotime($k->scan_date))}}</th>
+                       <td>{{$k->pin}}</th>
+                       <td>{{$k->sn}}</th>
+                       <!-- <th></th>
+                       <th></th>
+                       <th></th>
+                       <th></th>
+                       <th></th>
+                       <th></th>
+                       <th></th>
+                       <th></th>
+                       <th></th>
+                       <th></th>
+                       <th></th> -->
+                     </tr>
+                      @endforeach
+                      {{--Comment: ini utk mengecek role user = pkl atau staff? --}}
+                     @elseif(auth()->user()->role == 'pkl' && auth()->user()->role == 'staff')
+                      @foreach($kehadiran as $k)
+                    <tr>
+                      <td>{{$k->scan_date}}</th>
+                      <td>{{ date('l, j-F-Y',strtotime($k->scan_date))}}</th>
+                      <td>{{ date('H:i:s',strtotime($k->scan_date))}}</th>
+                      <td>{{$k->pin}}</th>
+                      <td>{{$k->sn}}</th>
+                      <!-- <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th> -->
+                    </tr>
+                      @endforeach
+                     @endif
+                   </tbody>
+                 </table>
+               </div>
+               {{ $kehadiran->links() }}
+             </div>
+           </div>
+             <br/>
          </div>
      </div>
  </div>
