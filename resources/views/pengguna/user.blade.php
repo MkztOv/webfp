@@ -53,8 +53,14 @@
             <td>{{$user->role}}</td>
             <td>{{$user->password}}</td>
             <td>
-							<a class="btn btn-warning btn-sm" href="#">Edit</a>
-							<a class="btn btn-danger btn-sm" href="#">Hapus</a>
+							
+              <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#edit-user">
+              Edit
+              </button>
+              <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus-user">
+              Hapus
+              </button>
+              
 						</td>
           </tr>
           @endforeach
@@ -63,8 +69,8 @@
     </div>
   </div>
   <div class="box-footer">
-
-    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
+<!-- modal tambah user -->
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-default">
                 Tambah User
               </button>
               <div class="modal fade" id="modal-default">
@@ -74,7 +80,7 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Default Modal</h4>
+                <h4 class="modal-title">Tambah User</h4>
               </div>
               <div class="modal-body">
                   @csrf
@@ -121,10 +127,6 @@
                   </div>
 
                   <div class="row">
-                    <div class="col-xs-12">
-                      <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
-                    </div>
-
                   </div>
               </div>
 
@@ -137,7 +139,94 @@
 
           </div>
         </div>
+<!-- modal edit user -->
+            <div class="modal fade" id="edit-user">
+                <form action="{{ url('user/update') }}" method="POST">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Edit User</h4>
+              </div>
+              <div class="modal-body">
+                  @csrf
+                  <div class="form-group has-feedback">
+                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autofocus placeholder="Nama Lengkap">
+                    <span class="glyphicon glyphicon-user form-control-feedback">
+                      @error('name')
+                          <strong>{{ $message }}</strong>
+                      @enderror
+                    </span>
+                  </div>
 
+                  <div class="form-group has-feedback">
+                      <select id="role" type="text" class="form-control @error('role') is-invalid @enderror" value="{{ old('role')}}" name="role" required autofocus>
+                        <option disabled selected>Role permission</option>
+                        <option value="pkl">PKL/Magang</option>
+                        <option value="staff">Staff</option>
+                        <option value="admin">Admin</option>
+                      </select>
+                      <span class="glyphicon glyphicon-tag form-control-feedback">
+
+                      </span>
+                  </div>
+
+                  <div class="form-group has-feedback">
+                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required placeholder="Email">
+                    <span class="glyphicon glyphicon-envelope form-control-feedback">
+                      @error('email')
+                      <strong>{{$message}}</strong>
+                      @enderror
+                    </span>
+                  </div>
+
+                  <div class="form-group has-feedback">
+                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required placeholder="Password">
+                    <span class="glyphicon glyphicon-lock form-control-feedback">
+
+                    </span>
+                  </div>
+
+                  <div class="form-group has-feedback">
+                    <input id="password-confirm" type="password" class="form-control" placeholder="Retype password" name="password_confirmation" required>
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                  </div>
+
+                  <div class="row">
+                  </div>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </form>
+
+          </div>
+        </div>
+  <!-- modal hapus user -->
+  <div class="modal modal-warning fade" id="hapus-user">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Hapus User</h4>
+              </div>
+              <div class="modal-body">
+                <p>Anda yakin mau hapus user??</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-outline">Save changes</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
   </div>
 </div>
 </section>

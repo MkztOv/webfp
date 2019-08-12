@@ -92,7 +92,7 @@ class HomeController extends Controller
       $user->name = $request->name;
       $user->email = $request->email;
       // $user->password = bcrypt('$request->password');
-      $user->password = Hash::make($request->password);
+      $user->email = Hash::make($request->password);
       $user->role = $request->role;
       $user->remember_token = str_random(10);
       $user->save();
@@ -101,8 +101,33 @@ class HomeController extends Controller
       return redirect('/user')->with('Berhasil','Data telah masuk');
       // return $request->all();
     }
+    
+    //update user
+    public function update (Request $request)
+    {
+        $user = new \App\User;
+        $user->where('id', $request->id)->update([
+            'nama' => $request->nama,
+            'email' => $request->email,
+            'email' => $request->email  = Hash::make($request->password),
+            'role' => $request->role
+        ]);
+        $user->remember_token = str_random(10);
+        $user->save();
+        //
+        // User::create($request->all());
+        return redirect('/user')->with('Berhasil','Data telah diubah');
+    }
 
+    //delete data pegawai
+    public function hapus($id){
+        //menghapus data
+        DB::table('users')->where('id',$id)->delete();
 
+        //alihkan ke halaman utama
+        
+        return redirect('/user')->with('Berhasil','Data telah dihapus');
+    }
     //user list
 
     //view tambah pegawai di dalam pegawai Aktif
