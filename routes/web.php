@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Support\Facades\Input;
+use App\log_kehadiran;
 
 Route::get('/', function () {
     return view('welcome');
@@ -68,6 +70,25 @@ Route::group(['middleware'=> ['auth','checkRole:admin']], function(){
 
       //data scan log nantinya admin bisa lihat semua pegawai
 
+      Route::any('/searchScanLog', function(){
+        $cari = Input::get('cari');
+        if($cari != ''){
+          $kehadiran =  log_kehadiran::select('scan_date','pin','sn')
+                                    ->Where('pin','like','%'.$cari.'%')
+                                    ->orderBy('scan_date','desc')
+                                    ->paginate(10)
+                                    ->setPath('');
+          $kehadiran->appends(array(
+            'cari'=>Input::get('cari')
+          ));
+          if (count($kehadiran)>0) {
+            return view ('laporan.data_scanlog')->with(['kehadiran'=>$kehadiran]);
+          }
+          return view ('laporan.data_scanlog')->with('message','Data Tidak ditemukan');
+        }elseif($cari == ''){
+          return redirect('data_scanlog')->with('status','Tidak Ada Data yang dicari');
+        }
+      });
       // Route::get('/data_scanlog', 'HomeController@searchScanLog');
       //
       //
@@ -101,7 +122,8 @@ Route::group(['middleware'=> ['auth','checkRole:admin,pkl,staff']], function(){
   /*data Laporan
   harian user*/
   //data scan log nantinya hanya menampilkan data user yang sedang login
-  Route::get('/data_scanlog', 'HomeController@data_scanlog');
+  Route::any('/data_scanlog', 'HomeController@data_scanlog');
+  // Route::get('/Caridata_scanlog','HomeController@Caridata_scanlog');
   //
   Route::get('/kartu_scanlog', 'HomeController@kartu_scanlog');
   Route::get('/rincian_harian', 'HomeController@rincian_harian');

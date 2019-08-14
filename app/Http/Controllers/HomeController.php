@@ -6,8 +6,10 @@ use DB;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use App\log_kehadiran;
+
 // use Illuminate\Pagination\LengthAwarePaginator;
-// use App\User;
+use App\Pegawai;
 
 class HomeController extends Controller
 {
@@ -61,8 +63,7 @@ class HomeController extends Controller
       // $data = array_slice($results, $offset, $pageSize, true);
       // $pegawai_a = new LengthAwarePaginator($data, count($data), $pageSize, $page);
       //
-      $pegawai_a = DB::table('pegawai')
-                      ->leftJoin('jkm_with_jkp',
+      $pegawai_a = Pegawai::leftJoin('jkm_with_jkp',
                                  'pegawai.pegawai_id','=','jkm_with_jkp.pegawai_id')
                       ->leftJoin('pembagian1',
                                   'pegawai.pembagian1_id','=','pembagian1.pembagian1_id')
@@ -198,19 +199,64 @@ class HomeController extends Controller
         return view('pengecualian/kerja_extra_perhari');
     }
 
+    // public function Caridata_scanlog(Request $request)
+    // {
+    //   if ($request->has('cari')) {
+    //     $cari = $request->cari;
+    //     $kehadiran = DB::table('att_log')
+    //                      ->select('scan_date','pin','sn')
+    //                      ->orWhere('pin','like','%'.$cari.'%')
+    //                      ->orderBy('scan_date','desc')
+    //                      ->get();
+    //    return view ('laporan.data_scanlog',['kehadiran'=>$kehadiran]);
+    //  }elseif($request->has('')){
+    //    $kehadiran = DB::table('att_log')
+    //                     ->select('scan_date','pin','sn')
+    //                     ->orderBy('scan_date','desc')
+    //                     ->paginate(15);
+    //  // }
+    //  return view ('laporan.data_scanlog',compact('kehadiran'));
+    //  }
+    // }
     public function data_scanlog(Request $request)
     {
-        if ($request->has('cari')) {
-          $kehadiran = DB::table('att_log')
-                           ->select('scan_date','pin','sn')
-                           ->where('pin','like',"%".$request->cari."%")
-                           ->paginate(15);
-        }else{
-          $kehadiran = DB::table('att_log')
-                           ->select('scan_date','pin','sn')
-                           ->paginate(15);
-        }
-        return view ('laporan.data_scanlog',compact('kehadiran'));
+     //  if ($request->has('cari') && $request != '') {
+     //    $cari = $request->cari;
+     //    $kehadiran = DB::table('att_log')
+     //                     ->select('scan_date','pin','sn')
+     //                     ->orWhere('pin','like','%'.$cari.'%')
+     //                     ->orderBy('scan_date','desc')
+     //                     ->get();
+     //   return view ('laporan.data_scanlog',['kehadiran'=>$kehadiran]);
+     // }
+     // else{
+       $kehadiran = log_kehadiran::select('scan_date','pin','sn')
+                                 ->orderBy('scan_date','desc')
+                                 ->paginate(10);
+       // }
+       return view ('laporan.data_scanlog',compact('kehadiran'));
+       // return view ('laporan.data_scanlog')->withData($kehadiran);
+
+     // }
+        // if ($users()->role=='admin') {
+
+                             // ->setPath('');
+            // $pagination = $kehadiran->appends(array('cari') => $request);
+             // if (count($kehadiran)>0)
+             // {
+             //   return view ('laporan.data_scanlog',compact('kehadiran'))
+             //               ->withDetails($kehadiran)
+             //               ->withQuery($request->cari);
+             // }
+          // }else{
+        // } elseif ($user()->role=='pkl' && $users()->role=='staff') {
+        //   $kehadiran = DB::table('att_log')
+        //                    ->select('scan_date','pin','sn')
+        //                    ->where('pin','=',"".$users()->pin"")
+        //                    ->orderby('scan_date','desc')
+        //                    ->paginate(15);
+        // }
+
     }
 
     public function kartu_scanlog() {

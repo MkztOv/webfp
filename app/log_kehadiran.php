@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Carbon\Carbon;
+// use Carbon\Carbon;
 
 class log_kehadiran extends Model
 {
@@ -13,5 +13,5 @@ class log_kehadiran extends Model
     // {
     //   return \Carbon\Carbon::parse($this->atttributes['scan_date'])->format('l, j-F-Y');
     // }
-    
+
 }

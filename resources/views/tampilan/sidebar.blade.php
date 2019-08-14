@@ -90,7 +90,7 @@
 
         @endif
         <li class="treeview">
-          <a href="{{url('laporan')}}"><i class="fa fa-link"></i><span>Laporan</span>
+          <a href=""><i class="fa fa-link"></i><span>Laporan</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
