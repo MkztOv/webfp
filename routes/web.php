@@ -42,7 +42,39 @@ Route::group(['namespace'=>'Auth'],function(){
 //middleware
 Route::group(['middleware'=> ['auth','checkRole:admin']], function(){
 
+      Route::get('/data_scanlog2','LogKehadiranController@viewlogscan');
+      // Route::get('/data_scanlog3','LogKehadiranController@view3');
+      // Route::any('/data_scanlog2', function(){
+      //   $cari = Input::get('cari');
+      //   if($cari != ''){
+      //     // $logscan = DB::Raw('
+      //     //   select pin, (select convert(scan_date, date)) as Hari, count(scan_date) as Total_scan
+      //     //   from att_log
+      //     //   where scan_date like "2019%"
+      //     //   group by hari,pin
+      //     //   order by scan_date desc
+      //     // ');
+      //     $logscan =  log_kehadiran::select('pin','(select convert(scan_date, date)) as Hari','count(scan_date) as Total_scan')
+      //                               ->Where('scan_date','like',''.$cari.'%')
+      //                               ->groupBy('hari','pin')
+      //                               ->orderBy('scan_date','desc')
+      //                               ->paginate(10)
+      //                               ->setPath('');
+      //     $logscan->appends(array(
+      //       'cari'=>Input::get('cari')
+      //     ));
+      //     if (count($logscan)>0) {
+      //       return view ('laporan.data_scanlog2')->with(['logscan'=>$logscan]);
+      //     }
+      //     return view ('laporan.data_scanlog2')->with('message','Data Tidak ditemukan');
+      //   }elseif($cari == ''){
+      //     return redirect('data_scanlog2')->with('status','Tidak Ada Data yang dicari');
+      //   }
+      // });
 
+
+
+      Route::get('/cobacharts','LogKehadiranController@index');
       // Route::get('/aktif','PegawaiController@index');
       Route::get('/tambah','PegawaiController@tambah');
       //route pegawai

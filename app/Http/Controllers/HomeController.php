@@ -93,16 +93,17 @@ class HomeController extends Controller
       $user->name = $request->name;
       $user->email = $request->email;
       // $user->password = bcrypt('$request->password');
-      $user->email = Hash::make($request->password);
+      $user->password = Hash::make($request->password);
       $user->role = $request->role;
       $user->remember_token = str_random(10);
       $user->save();
       //
       // User::create($request->all());
+      // dd($user);
       return redirect('/user')->with('Berhasil','Data telah masuk');
       // return $request->all();
     }
-    
+
     //update user
     public function update (Request $request)
     {
@@ -126,7 +127,7 @@ class HomeController extends Controller
         DB::table('users')->where('id',$id)->delete();
 
         //alihkan ke halaman utama
-        
+
         return redirect('/user')->with('Berhasil','Data telah dihapus');
     }
     //user list
